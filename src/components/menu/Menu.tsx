@@ -15,8 +15,11 @@ const Menu = () => {
 
   return (
     <Box className="menuBox">
-      <NavLink to={"/users/all/1"} className={() => (pathname.includes("users") ? "nav-link active" : "nav-link")}>
-        <GroupIcon fill={pathname.includes("users") ? "#FFFFFF" : "#A2A2A2"} />
+      <NavLink
+        to={"/users/all/1"}
+        className={() => (pathname.includes("users") || pathname.includes("user") ? "nav-link active" : "nav-link")}
+      >
+        <GroupIcon fill={pathname.includes("users") || pathname.includes("user") ? "#FFFFFF" : "#A2A2A2"} />
         {t("users")}
       </NavLink>
       <NavLink to={"/payments"} className={() => (pathname.includes("payments") ? "nav-link active" : "nav-link")}>

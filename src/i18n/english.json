@@ -34,7 +34,8 @@
       "timeZone": "Time zone",
       "info": "Info",
       "back": "Back",
-      "next": "Next"
+      "next": "Next",
+      "emptyUsers": "No users found"
     }
   }
 }
