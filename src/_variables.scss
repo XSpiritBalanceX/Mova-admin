@@ -1,0 +1,16 @@
+@use "sass:map";
+
+$theme-colors: (
+  "box-shadow": (
+    "shadow": (
+      3px 12px 24px rgba(129, 137, 197, 0.2),
+    ),
+  ),
+);
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

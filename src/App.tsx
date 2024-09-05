@@ -4,6 +4,8 @@ import { useAppSelector } from "@store/hook";
 import * as movaAdminSelectors from "@store/selectors";
 import RouterComponent from "@components/router/RouterComponent";
 import ScrollToTop from "@components/scrollToTop/ScrollToTop";
+import { ToastContainer, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const locale = useAppSelector(movaAdminSelectors.localeSelect);
@@ -16,6 +18,15 @@ const App = () => {
 
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        theme="light"
+        className={"notificationToast"}
+        toastClassName={"toastBody"}
+        progressClassName={"toastProgress"}
+        transition={Zoom}
+      />
       <ScrollToTop />
       <RouterComponent />
     </>
