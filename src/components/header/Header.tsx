@@ -6,7 +6,7 @@ import "./Header.scss";
 const Header = () => {
   return (
     <Container className="headerContainer">
-      <NavLink to={"/users"}>
+      <NavLink to={"/users/all/1"}>
         <img src={logo} alt="logo" />
       </NavLink>
     </Container>

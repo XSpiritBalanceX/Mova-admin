@@ -10,7 +10,7 @@ const RouterComponent = () => {
 
   const unauthRoutes = [{ path: "/login", element: <AuthPage /> }];
 
-  const authRoutes = [{ path: "/users", element: <UsersPage /> }];
+  const authRoutes = [{ path: "/users/:type/:page", element: <UsersPage /> }];
 
   return (
     <Routes>
@@ -20,7 +20,7 @@ const RouterComponent = () => {
       {authRoutes.map((el, ind) => (
         <Route key={ind} path={el.path} element={<ProtectedRouter>{el.element}</ProtectedRouter>} />
       ))}
-      <Route path="*" element={isLogin ? <Navigate to={"/users"} /> : <Navigate to={"/login"} />} />
+      <Route path="*" element={isLogin ? <Navigate to={"/users/all/1"} /> : <Navigate to={"/login"} />} />
     </Routes>
   );
 };

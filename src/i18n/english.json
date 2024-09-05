@@ -13,6 +13,13 @@
       "reqEmail": "Email required",
       "wrongEmail": "Invalid email",
       "reqPassword": "Password required. Use numbers and Latin letters"
+    },
+    "menu": {
+      "users": "Users",
+      "payments": "Payments",
+      "notifications": "Notifications",
+      "support": "Support",
+      "settings": "Настройки"
     }
   }
 }

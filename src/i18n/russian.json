@@ -13,6 +13,13 @@
       "reqEmail": "Email обязателен",
       "wrongEmail": "Неверный email",
       "reqPassword": "Пароль обязателен. Используйте цифры и латинские буквы"
+    },
+    "menu": {
+      "users": "Пользователи",
+      "payments": "Платежи",
+      "notifications": "Уведомления",
+      "support": "Поддержка",
+      "settings": "Настройки"
     }
   }
 }
