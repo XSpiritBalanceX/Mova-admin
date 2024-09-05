@@ -1,3 +1,18 @@
 {
-  "translate": {}
+  "translate": {
+    "authPage": {
+      "enter": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "forgetPassword": "Forgot your password?",
+      "signIn": "Sign in",
+      "errSignIn": "An error has occurred. Check your details.",
+      "wrongFormatPassword": "Only numbers, upper and lowercase Latin letters",
+      "passMin": "Password must be 8 characters long",
+      "passMax": "The password cannot have more than 32 characters",
+      "reqEmail": "Email required",
+      "wrongEmail": "Invalid email",
+      "reqPassword": "Password required. Use numbers and Latin letters"
+    }
+  }
 }

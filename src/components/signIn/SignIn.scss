@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.signInBox {
+  max-width: 500px;
+  width: 100%;
+  .title {
+    margin: 0 0 20px 0;
+    @extend %title;
+    text-align: center;
+  }
+  .signInFieldBox:first-child {
+    margin-bottom: 20px;
+  }
+  .linkBox {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;
+      color: map-get($theme-colors, "main-blue");
+      @extend %h2;
+      line-height: 110%;
+    }
+  }
+  .submitButton {
+    margin: 20px 0 0 0;
+    width: 100%;
+    @extend %button-1;
+  }
+}
