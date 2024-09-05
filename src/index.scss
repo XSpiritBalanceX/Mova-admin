@@ -23,7 +23,7 @@ body {
       border-radius: 0;
     }
     > div {
-      @extend %h2;
+      @extend %h3;
     }
     .toastProgress {
       height: 100%;

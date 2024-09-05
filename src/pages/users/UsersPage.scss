@@ -2,4 +2,11 @@
 
 .usersPageContainer {
   padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentUsersBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }

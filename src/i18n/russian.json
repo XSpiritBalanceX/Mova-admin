@@ -20,6 +20,21 @@
       "notifications": "Уведомления",
       "support": "Поддержка",
       "settings": "Настройки"
+    },
+    "usersPage": {
+      "all": "Все",
+      "students": "Ученики",
+      "teachers": "Преподаватели",
+      "archive": "Архив",
+      "createAdmin": "Создать администратора",
+      "searchUsers": "Поиск пользователя",
+      "name": "Имя Фамилия",
+      "status": "Статус",
+      "email": "Почта",
+      "timeZone": "Временная зона",
+      "info": "Инфо",
+      "back": "Назад",
+      "next": "Далее"
     }
   }
 }

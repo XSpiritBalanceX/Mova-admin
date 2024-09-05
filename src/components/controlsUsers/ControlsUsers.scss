@@ -1,0 +1,69 @@
+@import "../../variables";
+
+.controlsUsersBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .typesBox {
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    button {
+      text-transform: none;
+    }
+    .typeButton {
+      padding: 5px 0;
+      margin: 0 10px 0 0;
+      min-width: 28px;
+      color: map-get($theme-colors, "gray-3");
+      @extend %medium-text;
+      border-radius: 0;
+    }
+    .typeButton.activeButton {
+      color: map-get($theme-colors, "main-blue");
+      border-bottom: solid 2px map-get($theme-colors, "main-blue");
+      @extend %h3;
+    }
+    .createAdminButton {
+      padding: 0;
+      color: map-get($theme-colors, "main-blue");
+      @extend %h3;
+    }
+  }
+  .searchFieldBox {
+    width: 100%;
+    margin: 0 0 20px 0;
+    .searchField {
+      width: 100%;
+      height: 54px;
+      background-color: map-get($theme-colors, "gray");
+      border-radius: 30px;
+      .MuiInputBase-root.MuiInputBase-formControl {
+        height: 54px;
+        border-radius: 30px;
+        @extend %regular-text;
+        input {
+          height: 54px;
+          padding: 0 20px 0 0;
+          color: map-get($theme-colors, "black");
+        }
+        fieldset {
+          border: solid 1px map-get($theme-colors, "gray");
+        }
+        .MuiInputAdornment-root {
+          svg {
+            fill: map-get($theme-colors, "gray-3");
+          }
+        }
+      }
+      .MuiInputBase-root.MuiInputBase-formControl.Mui-focused {
+        border: none;
+        fieldset {
+          border: solid 2px map-get($theme-colors, "main-blue");
+        }
+      }
+    }
+  }
+}
