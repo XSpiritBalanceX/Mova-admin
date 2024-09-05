@@ -5,6 +5,7 @@ import * as movaAdminSelectors from "@store/selectors";
 import RouterComponent from "@components/router/RouterComponent";
 import ScrollToTop from "@components/scrollToTop/ScrollToTop";
 import { ToastContainer, Zoom } from "react-toastify";
+import Header from "@components/header/Header";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
         transition={Zoom}
       />
       <ScrollToTop />
+      <Header />
       <RouterComponent />
     </>
   );

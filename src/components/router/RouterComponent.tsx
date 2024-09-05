@@ -2,6 +2,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import ProtectedRouter from "./ProtectedRouter";
 import ProtectedRouterForLogged from "./ProtectedRouterForLogged";
 import AuthPage from "@pages/auth/AuthPage";
+import UsersPage from "@pages/users/UsersPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
@@ -9,7 +10,7 @@ const RouterComponent = () => {
 
   const unauthRoutes = [{ path: "/login", element: <AuthPage /> }];
 
-  const authRoutes = [{ path: "/users", element: <div>users</div> }];
+  const authRoutes = [{ path: "/users", element: <UsersPage /> }];
 
   return (
     <Routes>
