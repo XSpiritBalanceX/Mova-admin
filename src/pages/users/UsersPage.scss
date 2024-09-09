@@ -37,5 +37,22 @@
         }
       }
     }
+    .usersPagination {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 65px;
+      button {
+        border-radius: 2px;
+        @extend %medium-text;
+        padding: 0;
+        height: 19px;
+        min-width: 19px;
+        color: map-get($theme-colors, "dark-gray");
+      }
+      .MuiButtonBase-root.Mui-selected {
+        background-color: map-get($theme-colors, "main-blue");
+        color: map-get($theme-colors, "white");
+      }
+    }
   }
 }
