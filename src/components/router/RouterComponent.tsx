@@ -3,6 +3,7 @@ import ProtectedRouter from "./ProtectedRouter";
 import ProtectedRouterForLogged from "./ProtectedRouterForLogged";
 import AuthPage from "@pages/auth/AuthPage";
 import UsersPage from "@pages/users/UsersPage";
+import CreateAdminPage from "@pages/create_admin/CreateAdminPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
@@ -10,7 +11,10 @@ const RouterComponent = () => {
 
   const unauthRoutes = [{ path: "/login", element: <AuthPage /> }];
 
-  const authRoutes = [{ path: "/users/:type/:page", element: <UsersPage /> }];
+  const authRoutes = [
+    { path: "/users/:type/:page", element: <UsersPage /> },
+    { path: "/create_admin", element: <CreateAdminPage /> },
+  ];
 
   return (
     <Routes>

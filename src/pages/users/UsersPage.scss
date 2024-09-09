@@ -7,7 +7,7 @@
   .contentUsersBox {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: calc(100% - 211px);
     .usersTable {
       border-collapse: separate;
       border-spacing: 0 20px;
