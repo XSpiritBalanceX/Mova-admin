@@ -50,6 +50,19 @@
       "passMax": "The password cannot have more than 32 characters",
       "create": "Create",
       "errReq": "An unexpected error occurred"
+    },
+    "changeUserPage": {
+      "general": "General",
+      "myLessons": "My lessons",
+      "payments": "Subscription and payments",
+      "changePassword": "Change password",
+      "change": "Change",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "dateOfBirth": "Date of birth",
+      "learnLanguage": "Language of study",
+      "levelOfLang": "Proficiency level",
+      "goalLearn": "Purpose of study"
     }
   }
 }

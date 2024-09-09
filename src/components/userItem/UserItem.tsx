@@ -17,8 +17,11 @@ const UserItem = ({ id, name, email, status, timeZone }: IUserItemProps) => {
   const navigate = useNavigate();
 
   const handleShowProfile = () => {
-    navigate(`/user/${id}`);
+    status === "Ученик" && localStorage.setItem("mova_admin_user_type", "0");
+    status === "Преподаватель" && localStorage.setItem("mova_admin_user_type", "1");
+    navigate(`/user/${id}/general`);
   };
+
   return (
     <TableRow className="userItemRow">
       <TableCell>

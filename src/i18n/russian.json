@@ -50,6 +50,19 @@
       "passMax": "Пароль не может иметь больше 32 символов",
       "create": "Создать",
       "errReq": "Произошла непредвиденная ошибка"
+    },
+    "changeUserPage": {
+      "general": "Общее",
+      "myLessons": "Мои уроки",
+      "payments": "Подписка и платежи",
+      "changePassword": "Изменение пароля",
+      "change": "Изменить",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "dateOfBirth": "Дата рождения",
+      "learnLanguage": "Язык изучения",
+      "levelOfLang": "Уровень владения",
+      "goalLearn": "Цель изучения"
     }
   }
 }
