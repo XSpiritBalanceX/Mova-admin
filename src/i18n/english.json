@@ -1,3 +1,41 @@
 {
-  "translate": {}
+  "translate": {
+    "authPage": {
+      "enter": "Sign in",
+      "email": "Email",
+      "password": "Password",
+      "forgetPassword": "Forgot your password?",
+      "signIn": "Sign in",
+      "errSignIn": "An error has occurred. Check your details.",
+      "wrongFormatPassword": "Only numbers, upper and lowercase Latin letters",
+      "passMin": "Password must be 8 characters long",
+      "passMax": "The password cannot have more than 32 characters",
+      "reqEmail": "Email required",
+      "wrongEmail": "Invalid email",
+      "reqPassword": "Password required. Use numbers and Latin letters"
+    },
+    "menu": {
+      "users": "Users",
+      "payments": "Payments",
+      "notifications": "Notifications",
+      "support": "Support",
+      "settings": "Настройки"
+    },
+    "usersPage": {
+      "all": "All",
+      "students": "Students",
+      "teachers": "Teachers",
+      "archive": "Archive",
+      "createAdmin": "Create an administrator",
+      "searchUsers": "Search for a user",
+      "name": "First Last Name",
+      "status": "Status",
+      "email": "Email",
+      "timeZone": "Time zone",
+      "info": "Info",
+      "back": "Back",
+      "next": "Next",
+      "emptyUsers": "No users found"
+    }
+  }
 }

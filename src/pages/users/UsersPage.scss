@@ -1,0 +1,41 @@
+@import "../../variables";
+
+.usersPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentUsersBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .usersTable {
+      border-collapse: separate;
+      border-spacing: 0 20px;
+      .usersTableHead {
+        tr {
+          th {
+            border: none;
+            color: map-get($theme-colors, "gray-3");
+            padding-bottom: 15px;
+            padding-top: 0;
+            @extend %medium-text;
+          }
+        }
+      }
+      .emptyRowUsers {
+        td {
+          border: none;
+          border-radius: 20px;
+          background-color: map-get($theme-colors, "white");
+          padding: 25px;
+          height: 90px;
+          p {
+            margin: 0;
+            @extend %medium-text;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.userItemRow {
+  padding: 0;
+  vertical-align: top;
+  margin-bottom: 20px !important;
+  box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+  border-radius: 15px;
+  height: 62px;
+  td {
+    border: none;
+    padding: 0;
+  }
+  .userItemBox {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    .buttonInfo {
+      text-transform: none;
+      color: map-get($theme-colors, "main-blue");
+      padding: 0;
+      border-radius: 0;
+      svg {
+        fill: map-get($theme-colors, "main-blue");
+        margin: 0 7px 0 0;
+      }
+    }
+  }
+}
