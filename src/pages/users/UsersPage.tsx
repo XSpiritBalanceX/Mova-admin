@@ -1,20 +1,11 @@
 import { useState, useEffect } from "react";
-import {
-  Container,
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Pagination,
-  PaginationItem,
-} from "@mui/material";
+import { Container, Box, Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { translate } from "@i18n";
 import Menu from "@components/menu/Menu";
 import ControlsUsers from "@components/controlsUsers/ControlsUsers";
 import UserItem from "@components/userItem/UserItem";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import CustomPagination from "@components/pagination/CustomPagination";
 import "./UsersPage.scss";
 
 const mockData = [
@@ -50,7 +41,6 @@ const mockData = [
 const UsersPage = () => {
   const { t } = translate("translate", { keyPrefix: "usersPage" });
 
-  const navigate = useNavigate();
   const { type, page } = useParams();
 
   const [usersPerPage] = useState(9);
@@ -72,10 +62,6 @@ const UsersPage = () => {
     }
     // eslint-disable-next-line
   }, [searchWord]);
-
-  const handleChangePage = (_: React.ChangeEvent<unknown>, value: number) => {
-    navigate(`/users/${type}/${value}`);
-  };
 
   return (
     <Container className="usersPageContainer">
@@ -111,21 +97,14 @@ const UsersPage = () => {
             )}
           </TableBody>
         </Table>
-        <Box>
-          <Pagination
-            count={Math.ceil(mockData.length / usersPerPage)}
-            shape="rounded"
-            onChange={handleChangePage}
-            className="usersPagination"
-            page={Number(page)}
-            renderItem={(item) => (
-              <PaginationItem
-                slots={{ previous: () => <p>{t("back")}</p>, next: () => <p>{t("next")}</p> }}
-                {...item}
-              />
-            )}
-          />
-        </Box>
+        <CustomPagination
+          count={mockData.length}
+          itemsPerPage={usersPerPage}
+          urlPage={`/users/${type}`}
+          activePage={page as string}
+          nameBtnBack={t("back")}
+          nameBtnNext={t("next")}
+        />
       </Box>
     </Container>
   );
