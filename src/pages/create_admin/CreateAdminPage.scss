@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.containerCreateAdmin {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentCreateAdmin {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    max-width: 430px;
+    .navigateButton {
+      text-transform: none;
+      width: auto;
+      color: map-get($theme-colors, "black");
+      @extend %h1;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+    .controlledFieldBox {
+      margin-bottom: 15px;
+    }
+    .submitButton {
+      @extend %button-1;
+      width: 100%;
+      @extend %btn;
+    }
+  }
+}

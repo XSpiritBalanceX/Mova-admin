@@ -36,6 +36,20 @@
       "back": "Back",
       "next": "Next",
       "emptyUsers": "No users found"
+    },
+    "createAdminPage": {
+      "createAdmin": "Create an administrator",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "errReqField": "Fill in the field",
+      "wrongEmail": "Invalid email",
+      "wrongFormatPassword": "Only numbers, upper and lowercase Latin letters",
+      "passMin": "Password must be 8 characters long",
+      "passMax": "The password cannot have more than 32 characters",
+      "create": "Create",
+      "errReq": "An unexpected error occurred"
     }
   }
 }
