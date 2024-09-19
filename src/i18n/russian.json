@@ -65,7 +65,29 @@
       "goalLearn": "Цель изучения",
       "status": "Статус",
       "student": "Ученик",
-      "teacher": "Преподаватель"
+      "teacher": "Преподаватель",
+      "country": "Страна"
+    },
+    "settingProfileUser": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "dateOfBirth": "Дата рождения",
+      "country": "Страна",
+      "learnLanguage": "Язык изучения",
+      "levelOfLang": "Уровень владения",
+      "goalLearn": "Цель изучения",
+      "status": "Статус",
+      "student": "Ученик",
+      "teacher": "Преподаватель",
+      "deleteLanguage": "Удалить язык",
+      "addLanguageLearn": "Добавить язык изучения",
+      "addLanguageTeach": "Добавить язык преподавания",
+      "enterText": "Введите текст",
+      "errReqField": "Заполните поле",
+      "reqEmail": "Email обязателен",
+      "wrongEmail": "Неверный email",
+      "saveChanges": "Сохранить изменения",
+      "errLetterNumber": "Неверное заполненное поле. От 3 до 20 символов"
     }
   }
 }

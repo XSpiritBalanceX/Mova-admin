@@ -3,6 +3,7 @@ import Menu from "@components/menu/Menu";
 import { useParams } from "react-router-dom";
 import ChangeUserMenu from "./ChangeUserMenu";
 import ProfileUser from "@components/profileUser/ProfileUser";
+import SettingProfileStudent from "@components/settingProfileStudent/SettingProfileStudent";
 import "./ChangeUserPage.scss";
 
 interface IChangeModules {
@@ -20,7 +21,7 @@ const ChangeUserPage = () => {
 
   const modules: IChangeModules = {
     general: <ProfileUser />,
-    general_change: userType === "0" ? <Box>general change</Box> : <Box>general change</Box>,
+    general_change: userType === "0" ? <SettingProfileStudent /> : <Box>general change</Box>,
     lessons: <Box>lessons</Box>,
     sub_pay: <Box>sub_pay</Box>,
     change_password: <Box>change_password</Box>,

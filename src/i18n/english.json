@@ -65,7 +65,29 @@
       "goalLearn": "Purpose of study",
       "status": "Status",
       "student": "Student",
-      "teacher": "Teacher"
+      "teacher": "Teacher",
+      "country": "Country"
+    },
+    "settingProfileUser": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "dateOfBirth": "Date of birth",
+      "country": "Country",
+      "learnLanguage": "Language of study",
+      "levelOfLang": "Proficiency level",
+      "goalLearn": "Purpose of study",
+      "status": "Status",
+      "student": "Student",
+      "teacher": "Teacher",
+      "deleteLanguage": "Remove language",
+      "addLanguageLearn": "Add learning language",
+      "addLanguageTeach": "Add teaching language",
+      "enterText": "Enter text",
+      "errReqField": "Fill in the field",
+      "reqEmail": "Email required",
+      "wrongEmail": "Invalid email",
+      "saveChanges": "Save changes",
+      "errLetterNumber": "Invalid field filled in. From 3 to 20 characters"
     }
   }
 }

@@ -5,6 +5,7 @@ import moment from "moment";
 import { language, level, TLanguages, TLevel } from "@utils/listOfLanguagesLevels";
 import { useAppSelector } from "@store/hook";
 import * as movaAdminSelectors from "@store/selectors";
+import { listOfCountries } from "@utils/listOfCountries";
 import "./ProfileUser.scss";
 
 const mockData = {
@@ -16,6 +17,7 @@ const mockData = {
     last_name: "Иванова",
     date_of_birth: "1995-05-25",
     email: "example@gmail.com",
+    country: 25,
   },
   languages: [
     { language: 1, level: 2, goal: "Работа" },
@@ -40,10 +42,13 @@ const ProfileUser = () => {
     navigate(`/user/${user_id}/general_change`);
   };
 
+  const userCountry = listOfCountries.find((el) => el.id === mockData.user.country);
+
   const userFields = [
     { title: "firstName", data: mockData.user.first_name },
     { title: "lastName", data: mockData.user.last_name },
     { title: "dateOfBirth", data: moment(mockData.user.date_of_birth, "YYYY-MM-DD").format("DD.MM.YYYY") },
+    { title: "country", data: userCountry && (locale === "ru" ? userCountry.russianLabel : userCountry.englishLabel) },
   ];
 
   const statusFields = [
