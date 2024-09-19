@@ -9,7 +9,7 @@ import { useAppSelector } from "@store/hook";
 import * as movaAdminSelectors from "@store/selectors";
 import "./SettingProfileStudent";
 
-const StudentInformation = ({ control, errors, watch }: IStudentInformationProps) => {
+const StudentInformation = ({ control, errors }: IStudentInformationProps) => {
   const { t } = translate("translate", { keyPrefix: "settingProfileUser" });
 
   const locale = useAppSelector(movaAdminSelectors.localeSelect);

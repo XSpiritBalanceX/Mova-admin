@@ -8,6 +8,7 @@ import { IStudentFormInformation } from "./TypesSettingProfileStudent";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate, useParams } from "react-router-dom";
 import StudentInformation from "./StudentInformation";
+import UserAvatar from "@components/userAvatar/UserAvatar";
 import "./SettingProfileStudent.scss";
 
 const mockData = {
@@ -141,9 +142,14 @@ const SettingProfileStudent = () => {
         <Button type="button" onClick={handleNavigate} className="navigationButton">
           <ArrowBackIosNewIcon />
         </Button>
+        <UserAvatar
+          photo={mockData.user.avatar}
+          first_name={watch("user_information.first_name") || ""}
+          last_name={watch("user_information.last_name") || ""}
+        />
       </Box>
       <form onSubmit={handleSubmit(handleSubmitStudentProfile)}>
-        <StudentInformation control={control} errors={errors} watch={watch} />
+        <StudentInformation control={control} errors={errors} />
         <Button type="submit" className="submitButtonProfile">
           {t("saveChanges")}
         </Button>

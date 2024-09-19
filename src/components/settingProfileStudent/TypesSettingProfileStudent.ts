@@ -25,5 +25,4 @@ export interface IStudentFormInformation {
 export interface IStudentInformationProps {
   control: Control<IStudentFormInformation>;
   errors: FieldErrors<IStudentFormInformation>;
-  watch: UseFormWatch<IStudentFormInformation>;
 }
