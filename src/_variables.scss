@@ -77,6 +77,22 @@ $theme-colors: (
   line-height: 17px;
 }
 
+%body-1-medium {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+%body-2-regular {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
 %medium-text {
   font-family: "Montserrat";
   font-style: normal;

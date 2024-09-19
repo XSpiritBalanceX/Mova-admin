@@ -62,7 +62,10 @@
       "dateOfBirth": "Date of birth",
       "learnLanguage": "Language of study",
       "levelOfLang": "Proficiency level",
-      "goalLearn": "Purpose of study"
+      "goalLearn": "Purpose of study",
+      "status": "Status",
+      "student": "Student",
+      "teacher": "Teacher"
     }
   }
 }

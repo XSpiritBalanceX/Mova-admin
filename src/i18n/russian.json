@@ -62,7 +62,10 @@
       "dateOfBirth": "Дата рождения",
       "learnLanguage": "Язык изучения",
       "levelOfLang": "Уровень владения",
-      "goalLearn": "Цель изучения"
+      "goalLearn": "Цель изучения",
+      "status": "Статус",
+      "student": "Ученик",
+      "teacher": "Преподаватель"
     }
   }
 }
