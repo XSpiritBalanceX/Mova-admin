@@ -1,1 +1,47 @@
 @import "../../variables";
+
+.settingProfileStudentBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .buttonAvatarBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .navigationButton {
+      padding: 0;
+      color: map-get($theme-colors, "black");
+      margin: 0 20px 0 0;
+      min-width: 24px;
+    }
+  }
+  .studentInformationBox {
+    margin: 15px 0;
+    .itemInformation {
+      display: flex;
+      flex-direction: column;
+      .nameOfItem {
+        margin: 0 0 10px 0;
+        @extend %body-1-medium;
+      }
+      .dateOfBirthFields {
+        display: flex;
+        flex-direction: row;
+        .controlledFieldBox {
+          margin: 0 10px 0 0;
+        }
+        .controlledFieldBox:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .submitButtonProfile {
+    margin: 20px 0 0 0;
+    @extend %button-1;
+    width: 100%;
+    @extend %btn;
+  }
+}

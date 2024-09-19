@@ -87,7 +87,10 @@
       "reqEmail": "Email required",
       "wrongEmail": "Invalid email",
       "saveChanges": "Save changes",
-      "errLetterNumber": "Invalid field filled in. From 3 to 20 characters"
+      "errLetterNumber": "Invalid field filled in. From 3 to 20 characters",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year"
     }
   }
 }

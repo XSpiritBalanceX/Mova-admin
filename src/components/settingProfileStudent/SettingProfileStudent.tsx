@@ -1,26 +1,25 @@
 import { useState, useEffect } from "react";
 import { Box, Button } from "@mui/material";
 import { translate } from "@i18n";
-import { listOfCountries } from "@utils/listOfCountries";
 import { useForm, useFieldArray } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-import ControlledInput from "@components/fields/ControlledInput";
 import { IStudentFormInformation } from "./TypesSettingProfileStudent";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate, useParams } from "react-router-dom";
+import StudentInformation from "./StudentInformation";
 import "./SettingProfileStudent.scss";
 
 const mockData = {
   user: {
-    id: 12,
+    id: "12",
     user_type: 0,
     avatar: null,
     first_name: "Мария",
     last_name: "Иванова",
     date_of_birth: "1995-05-25",
     email: "example@gmail.com",
-    country: 0,
+    country: 25,
   },
   languages: [
     { id: 1, language: 1, level: 2, goal: "Работа" },
@@ -42,11 +41,13 @@ const SettingProfileStudent = () => {
 
   const [initialValues, setInitialValues] = useState<IStudentFormInformation>({
     user_information: {
+      id: "",
       first_name: "",
       last_name: "",
       date_of_birthday: { day: "", month: "", year: "" },
       email: "",
       country: "",
+      status: "",
     },
     learning_languages: [],
   });
@@ -59,11 +60,13 @@ const SettingProfileStudent = () => {
       return { id: el.id, language: el.language.toString(), level: el.level.toString(), description: el.goal };
     });
     const compiledDataStudent = {
+      id: mockData.user.id,
       first_name: mockData.user.first_name,
       last_name: mockData.user.last_name,
       date_of_birthday: { day: arrDateOfBirth[0], month: arrDateOfBirth[1], year: arrDateOfBirth[2] },
       email: mockData.user.email,
       country: mockData.user.country ? mockData.user.country.toString() : "",
+      status: mockData.user.user_type.toString(),
     };
     setInitialValues({ user_information: compiledDataStudent, learning_languages: compiledDataLanguages });
     setCountOfLanguages(compiledDataLanguages.length);
@@ -76,6 +79,7 @@ const SettingProfileStudent = () => {
 
   const validationSchema = Yup.object().shape({
     user_information: Yup.object({
+      id: Yup.string().required(t("errReqField")),
       first_name: Yup.string().required(t("errReqField")).min(3, t("errLetterNumber")).max(20, t("errLetterNumber")),
       last_name: Yup.string().required(t("errReqField")).min(3, t("errLetterNumber")).max(20, t("errLetterNumber")),
       date_of_birthday: Yup.object({
@@ -85,6 +89,7 @@ const SettingProfileStudent = () => {
       }),
       email: Yup.string().required(t("reqEmail")).email(t("wrongEmail")),
       country: Yup.string().default(""),
+      status: Yup.string().required(t("errReqField")),
     }),
     learning_languages: Yup.array()
       .of(
@@ -131,15 +136,17 @@ const SettingProfileStudent = () => {
   };
 
   return (
-    <Box>
-      <Box>
-        <Button type="button" onClick={handleNavigate}>
+    <Box className="settingProfileStudentBox">
+      <Box className="buttonAvatarBox">
+        <Button type="button" onClick={handleNavigate} className="navigationButton">
           <ArrowBackIosNewIcon />
         </Button>
       </Box>
-
       <form onSubmit={handleSubmit(handleSubmitStudentProfile)}>
-        <Button type="submit">{t("saveChanges")}</Button>
+        <StudentInformation control={control} errors={errors} watch={watch} />
+        <Button type="submit" className="submitButtonProfile">
+          {t("saveChanges")}
+        </Button>
       </form>
     </Box>
   );
