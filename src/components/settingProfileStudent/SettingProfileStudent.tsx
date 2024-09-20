@@ -9,6 +9,8 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate, useParams } from "react-router-dom";
 import StudentInformation from "./StudentInformation";
 import UserAvatar from "@components/userAvatar/UserAvatar";
+import StudentLanguage from "./StudentLanguage";
+import AddIcon from "@mui/icons-material/Add";
 import "./SettingProfileStudent.scss";
 
 const mockData = {
@@ -120,8 +122,10 @@ const SettingProfileStudent = () => {
     console.log(data);
   };
 
-  const handleCountLanguage = (value: number) => {
-    setCountOfLanguages(value);
+  const handleCountLanguage = () => {
+    setCountOfLanguages((value) => {
+      return value + 1;
+    });
   };
 
   const handleDeleteLanguage = (id: number) => {
@@ -135,6 +139,19 @@ const SettingProfileStudent = () => {
       remove(id);
     }
   };
+
+  const languagesRows: Array<JSX.Element> = Array(countOfLanguages)
+    .fill(null)
+    .map((_, ind) => (
+      <StudentLanguage
+        key={["StudentLanguageRow", ind].join("_")}
+        id={ind}
+        control={control}
+        errors={errors}
+        watch={watch}
+        cbHandleDeleteLanguage={handleDeleteLanguage}
+      />
+    ));
 
   return (
     <Box className="settingProfileStudentBox">
@@ -150,6 +167,15 @@ const SettingProfileStudent = () => {
       </Box>
       <form onSubmit={handleSubmit(handleSubmitStudentProfile)}>
         <StudentInformation control={control} errors={errors} />
+        <Box className="studentLanguagesBox">
+          {languagesRows}
+          <Button type="button" onClick={handleCountLanguage} className="addLanguageButton">
+            <span>
+              <AddIcon />
+            </span>
+            {t("addLanguageLearn")}
+          </Button>
+        </Box>
         <Button type="submit" className="submitButtonProfile">
           {t("saveChanges")}
         </Button>

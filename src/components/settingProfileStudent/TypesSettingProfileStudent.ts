@@ -26,3 +26,11 @@ export interface IStudentInformationProps {
   control: Control<IStudentFormInformation>;
   errors: FieldErrors<IStudentFormInformation>;
 }
+
+export interface IStudentLanguageProps {
+  id: number;
+  control: Control<IStudentFormInformation>;
+  errors: FieldErrors<IStudentFormInformation>;
+  watch: UseFormWatch<IStudentFormInformation>;
+  cbHandleDeleteLanguage: (id: number) => void;
+}
