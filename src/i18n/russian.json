@@ -53,6 +53,8 @@
     },
     "changeUserPage": {
       "general": "Общее",
+      "languages": "Языки",
+      "schedule": "Расписание",
       "myLessons": "Мои уроки",
       "payments": "Подписка и платежи",
       "changePassword": "Изменение пароля",

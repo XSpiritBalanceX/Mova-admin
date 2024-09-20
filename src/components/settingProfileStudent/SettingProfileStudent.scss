@@ -17,27 +17,6 @@
       min-width: 24px;
     }
   }
-  .studentInformationBox {
-    margin: 15px 0;
-    .itemInformation {
-      display: flex;
-      flex-direction: column;
-      .nameOfItem {
-        margin: 0 0 10px 0;
-        @extend %body-1-medium;
-      }
-      .dateOfBirthFields {
-        display: flex;
-        flex-direction: row;
-        .controlledFieldBox {
-          margin: 0 10px 0 0;
-        }
-        .controlledFieldBox:last-child {
-          margin: 0;
-        }
-      }
-    }
-  }
   .studentLanguagesBox {
     .addLanguageButton {
       padding: 0;

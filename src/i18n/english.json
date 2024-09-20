@@ -54,6 +54,8 @@
     "changeUserPage": {
       "general": "General",
       "myLessons": "My lessons",
+      "languages": "Languages",
+      "schedule": "Расписание",
       "payments": "Subscription and payments",
       "changePassword": "Change password",
       "change": "Change",

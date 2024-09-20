@@ -56,6 +56,8 @@ const ProfileUser = () => {
     { title: "ID", data: mockData.user.id },
   ];
 
+  const isStudent = localStorage.getItem("mova_admin_user_type") === "0";
+
   return (
     <Box className="containerProfileStudent">
       <Box className="userAvatarBox">
@@ -89,7 +91,7 @@ const ProfileUser = () => {
           <p className="titleText">E-mail</p> <p className="dataText">{mockData.user.email}</p>
         </Box>
       </Box>
-      {mockData.user.user_type === 0 &&
+      {isStudent &&
         mockData.languages.length > 0 &&
         mockData.languages.map((el, ind) => (
           <Box key={ind} className="informationBox">

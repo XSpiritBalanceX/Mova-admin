@@ -7,6 +7,8 @@ import "./ChangeUserPage.scss";
 const ChangeUserMenu = () => {
   const { t } = translate("translate", { keyPrefix: "changeUserPage" });
 
+  const isTeacher = localStorage.getItem("mova_admin_user_type") === "1";
+
   const navigate = useNavigate();
   const { user_id, type } = useParams();
 
@@ -33,6 +35,21 @@ const ChangeUserMenu = () => {
       name: "change_password",
     },
   ];
+
+  if (isTeacher) {
+    buttons.splice(
+      1,
+      0,
+      {
+        title: "languages",
+        name: "languages",
+      },
+      {
+        title: "schedule",
+        name: "schedule",
+      },
+    );
+  }
 
   const handleNavigateChanges = (e: React.MouseEvent<HTMLButtonElement>) => {
     navigate(`/user/${user_id}/${e.currentTarget.name}`);

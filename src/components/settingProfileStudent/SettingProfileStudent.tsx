@@ -7,10 +7,10 @@ import * as Yup from "yup";
 import { IStudentFormInformation } from "./TypesSettingProfileStudent";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate, useParams } from "react-router-dom";
-import StudentInformation from "./StudentInformation";
 import UserAvatar from "@components/userAvatar/UserAvatar";
 import StudentLanguage from "./StudentLanguage";
 import AddIcon from "@mui/icons-material/Add";
+import SettingUserInformation from "@components/settingUserInformation/SettingUserInformation";
 import "./SettingProfileStudent.scss";
 
 const mockData = {
@@ -152,7 +152,7 @@ const SettingProfileStudent = () => {
         cbHandleDeleteLanguage={handleDeleteLanguage}
       />
     ));
-  console.log(errors);
+
   return (
     <Box className="settingProfileStudentBox">
       <Box className="buttonAvatarBox">
@@ -166,7 +166,7 @@ const SettingProfileStudent = () => {
         />
       </Box>
       <form onSubmit={handleSubmit(handleSubmitStudentProfile)}>
-        <StudentInformation control={control} errors={errors} />
+        <SettingUserInformation control={control} errors={errors} />
         <Box className="studentLanguagesBox">
           {languagesRows}
           <Button type="button" onClick={handleCountLanguage} className="addLanguageButton">
