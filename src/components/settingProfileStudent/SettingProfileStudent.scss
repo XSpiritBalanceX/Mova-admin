@@ -65,8 +65,12 @@
           color: map-get($theme-colors, "black");
           margin: 0 0 5px 0;
         }
-        .labelLanguage.errorLabel {
+        .labelLanguage.errorLabel,
+        .errorMessage {
           color: map-get($theme-colors, "red");
+        }
+        .errorMessage {
+          @extend %regular-text;
         }
         .controlledField.goalField {
           .MuiInputBase-root {

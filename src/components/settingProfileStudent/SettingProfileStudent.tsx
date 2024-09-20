@@ -152,7 +152,7 @@ const SettingProfileStudent = () => {
         cbHandleDeleteLanguage={handleDeleteLanguage}
       />
     ));
-
+  console.log(errors);
   return (
     <Box className="settingProfileStudentBox">
       <Box className="buttonAvatarBox">

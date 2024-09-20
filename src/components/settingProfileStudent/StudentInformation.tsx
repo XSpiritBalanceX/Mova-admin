@@ -16,7 +16,7 @@ const StudentInformation = ({ control, errors }: IStudentInformationProps) => {
 
   const firstLastName = [
     { label: "firstName", name: "user_information.first_name", error: errors.user_information?.first_name?.message },
-    { label: "lastName", name: "user_information.last_name", error: errors.user_information?.first_name?.message },
+    { label: "lastName", name: "user_information.last_name", error: errors.user_information?.last_name?.message },
   ];
 
   const currentYear = moment().year();
@@ -57,7 +57,7 @@ const StudentInformation = ({ control, errors }: IStudentInformationProps) => {
     <Box className="studentInformationBox">
       <Box>
         {firstLastName.map((el, ind) => (
-          <ControlledInput key={ind} control={control} name={el.name} error={el.error} placeholder={el.label} />
+          <ControlledInput key={ind} control={control} name={el.name} error={el.error} placeholder={t(el.label)} />
         ))}
       </Box>
       <Box className="itemInformation">
