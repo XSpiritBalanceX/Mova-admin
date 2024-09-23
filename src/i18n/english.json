@@ -93,7 +93,11 @@
       "day": "Day",
       "month": "Month",
       "year": "Year",
-      "change": "Change"
+      "change": "Change",
+      "teachLanguage": "Language of teaching",
+      "profSkills": "Professional skills",
+      "coast": "Lesson cost ($)",
+      "certificates": "Certificates/Diplomas"
     },
     "userAvatar": {
       "upload": "Upload a photo",

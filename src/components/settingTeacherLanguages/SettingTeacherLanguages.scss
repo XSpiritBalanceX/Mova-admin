@@ -1,7 +1,6 @@
 @import "../../variables";
 
 .languagesSettingsBox {
-  border: solid 1px red;
   display: flex;
   flex-direction: column;
   max-width: 430px;
@@ -9,12 +8,62 @@
   margin: 0 0 40px 0;
   .buttonsNavigateBox {
     margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
     button {
       text-transform: none;
       @extend %btn;
       padding: 0;
       color: map-get($theme-colors, "black");
       min-width: 24px;
+    }
+  }
+  .buttonsNavigateBox.languageChangeButton {
+    justify-content: flex-end;
+  }
+  .viewLanguageItem {
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    margin: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 15px;
+    .viewLanguageItem:last-child {
+      margin: 0;
+    }
+    .languageInformationBox {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 15px 0;
+      .titleText {
+        margin: 0 20px 0 0;
+        max-width: 180px;
+        width: 100%;
+        color: map-get($theme-colors, "gray-3");
+        @extend %body-2-regular;
+      }
+      .dataText {
+        margin: 0;
+        @extend %body-1-medium;
+        width: calc(100% - 160px);
+      }
+    }
+    .languageInformationBox.certificatesItemBox {
+      flex-direction: column;
+      .certificatesBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+          width: 70px;
+          height: 70px;
+          margin: 10px 10px 0 0;
+        }
+        .certificatesBox:last-child {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
