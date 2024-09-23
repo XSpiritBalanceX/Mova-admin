@@ -97,7 +97,11 @@
       "teachLanguage": "Язык преподавания",
       "profSkills": "Профессиональные навыки",
       "coast": "Стоимость занятия ($)",
-      "certificates": "Сертификаты/дипломы"
+      "certificates": "Сертификаты/дипломы",
+      "errorFileSizeImage": "Размер файла слишком большой, не более 2 MБ.",
+      "errorTypeImage": "Формат файла только JPG или PNG.",
+      "hintCertificate1": "Формат JPG или PNG. Максимальный размер 2 MB.",
+      "hintCertificate2": "Можно загрузить не более, чем 5 файлов"
     },
     "userAvatar": {
       "upload": "Загрузить фото",

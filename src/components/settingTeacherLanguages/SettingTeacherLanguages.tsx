@@ -1,13 +1,9 @@
-import { useState, useEffect } from "react";
 import { Box, Button } from "@mui/material";
 import { translate } from "@i18n";
-import { useForm, useFieldArray } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as Yup from "yup";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { useNavigate, useParams } from "react-router-dom";
-import AddIcon from "@mui/icons-material/Add";
 import ViewTeacherLanguages from "./ViewTeacherLanguages";
+import ChangeTeacherLanguages from "./ChangeTeacherLanguages";
 import "./SettingTeacherLanguages.scss";
 
 export interface ITeacherLanguage {
@@ -92,6 +88,7 @@ const SettingTeacherLanguages = () => {
         </Box>
       )}
       {type === "languages" && <ViewTeacherLanguages languages={mockData} />}
+      {type === "languages_change" && <ChangeTeacherLanguages languages={mockData} />}
     </Box>
   );
 };
