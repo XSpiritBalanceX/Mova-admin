@@ -55,7 +55,7 @@
       "general": "General",
       "myLessons": "My lessons",
       "languages": "Languages",
-      "schedule": "Расписание",
+      "schedule": "Schedule",
       "payments": "Subscription and payments",
       "changePassword": "Change password",
       "change": "Change",
@@ -92,7 +92,8 @@
       "errLetterNumber": "Invalid field filled in. From 3 to 20 characters",
       "day": "Day",
       "month": "Month",
-      "year": "Year"
+      "year": "Year",
+      "change": "Change"
     },
     "userAvatar": {
       "upload": "Upload a photo",
