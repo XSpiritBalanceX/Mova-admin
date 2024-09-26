@@ -1,0 +1,149 @@
+@import "../../variables";
+
+.settingTeacherScheduleBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 530px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .buttonsNavigateBox {
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    button {
+      text-transform: none;
+      @extend %btn;
+      padding: 0;
+      color: map-get($theme-colors, "black");
+      min-width: 24px;
+    }
+  }
+  .buttonsNavigateBox.scheduleChangeButton {
+    justify-content: flex-end;
+    button {
+      color: map-get($theme-colors, "main-blue");
+    }
+  }
+  .scheduleBox {
+    display: flex;
+    flex-direction: column;
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    border-radius: 30px;
+    padding: 20px;
+    .titleSchedule,
+    .durationLesson {
+      text-align: center;
+    }
+    .titleSchedule {
+      @extend %h1;
+      margin: 0 0 10px 0;
+    }
+    .durationLesson {
+      @extend %h2;
+      margin: 0;
+      color: map-get($theme-colors, "main-blue");
+    }
+    .timeZoneBox {
+      margin: 20px 0;
+      @media all and (max-width: 48em) {
+        margin: 20px;
+      }
+      p {
+        @extend %h3;
+        margin: 0 0 5px 0;
+      }
+      .timeZoneField {
+        max-width: 360px;
+        div:nth-child(3) {
+          border-radius: 5px;
+          border-color: map-get($theme-colors, "black");
+          @extend %body-2-regular;
+          &:active {
+            border: solid 2px map-get($theme-colors, "main-blue");
+            box-shadow: none;
+          }
+          > div:nth-child(2) {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .daysTimeContainer {
+      display: flex;
+      flex-direction: column;
+      .daysBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 0 10px 0;
+        max-width: 480px;
+        .dayBox {
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @extend %h2;
+        }
+      }
+      .timeBox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 350px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+        &::-webkit-scrollbar-track {
+          background: map-get($theme-colors, "white-blue");
+          width: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: map-get($theme-colors, "main-blue");
+        }
+        .timeButton {
+          position: relative;
+          margin: 0 0 10px 0;
+          .timeCheckbox {
+            border: solid 1px map-get($theme-colors, "main-blue");
+            padding: 0;
+            width: 60px;
+            height: 30px;
+            border-radius: 4px;
+            svg {
+              display: none;
+            }
+          }
+          .timeCheckbox.Mui-checked {
+            background-color: map-get($theme-colors, "main-blue");
+          }
+          .timeCheckbox.Mui-checked + .MuiTypography-root {
+            color: map-get($theme-colors, "white");
+          }
+          .MuiTypography-root {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @extend %body-2-regular;
+            color: map-get($theme-colors, "main-blue");
+          }
+        }
+      }
+    }
+    .saveScheduleButtonBox {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 0 0 0;
+      button {
+        @extend %button-1;
+        @extend %btn;
+        width: 50%;
+        height: 40px;
+      }
+    }
+  }
+}

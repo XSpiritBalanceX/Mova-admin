@@ -111,6 +111,14 @@
       "errorTypeImage": "File format is JPG or PNG only.",
       "messageSucUpload": "The photo was successfully uploaded",
       "messageErrUpload": "An unexpected error occurred"
+    },
+    "settingTeacherSchedule": {
+      "change": "Change",
+      "saveChanges": "Save changes",
+      "scheduleLessons": "Lessons schedule",
+      "lessonDuration": "Lesson duration 55 minutes",
+      "chooseTimeZone": "Select your time zone",
+      "chooseLanguage": "Select language"
     }
   }
 }

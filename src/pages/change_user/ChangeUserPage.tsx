@@ -6,6 +6,7 @@ import ProfileUser from "@components/profileUser/ProfileUser";
 import SettingProfileStudent from "@components/settingProfileStudent/SettingProfileStudent";
 import SettingProfileTeacher from "@components/settingProfileTeacher/SettingProfileTeacher";
 import SettingTeacherLanguages from "@components/settingTeacherLanguages/SettingTeacherLanguages";
+import SettingTeachSchedule from "@components/settingTeacherSchedule/SettingTeachSchedule";
 import "./ChangeUserPage.scss";
 
 interface IChangeModules {
@@ -14,6 +15,7 @@ interface IChangeModules {
   languages: JSX.Element;
   languages_change: JSX.Element;
   schedule: JSX.Element;
+  schedule_change: JSX.Element;
   lessons: JSX.Element;
   sub_pay: JSX.Element;
   change_password: JSX.Element;
@@ -29,13 +31,14 @@ const ChangeUserPage = () => {
     general_change: userType === "0" ? <SettingProfileStudent /> : <SettingProfileTeacher />,
     languages: <SettingTeacherLanguages />,
     languages_change: <SettingTeacherLanguages />,
-    schedule: <Box>schedule</Box>,
+    schedule: <SettingTeachSchedule />,
+    schedule_change: <SettingTeachSchedule />,
     lessons: <Box>lessons</Box>,
     sub_pay: <Box>sub_pay</Box>,
     change_password: <Box>change_password</Box>,
   };
 
-  const excludesRoutes = ["general_change", "languages_change"];
+  const excludesRoutes = ["general_change", "languages_change", "schedule_change"];
 
   return (
     <Container className="containerChangeUser">

@@ -111,6 +111,14 @@
       "errorTypeImage": "Формат файла только JPG или PNG.",
       "messageSucUpload": "Фотография была успешно загружена",
       "messageErrUpload": "Возникла непредвиденная ошибка"
+    },
+    "settingTeacherSchedule": {
+      "change": "Изменить",
+      "saveChanges": "Сохранить изменения",
+      "scheduleLessons": "Расписание занятий",
+      "lessonDuration": "Длительность занятий 55 минут",
+      "chooseTimeZone": "Выберите ваш часовой пояс",
+      "chooseLanguage": "Выберите язык"
     }
   }
 }
