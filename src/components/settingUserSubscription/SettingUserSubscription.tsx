@@ -5,6 +5,7 @@ import moment from "moment";
 import Balance from "./Balance";
 import UserBankCards from "./UserBankCards";
 import ModalNewBankCard from "@components/modal/ModalNewBankCard";
+import UserPaymentHistory from "./UserPaymentHistory";
 import "./SettingUserSubscription.scss";
 
 const mockDataSubscription = {
@@ -15,11 +16,65 @@ const mockDataSubscription = {
   sum: "150 BYN",
 };
 
+const mockDataHistory = [
+  {
+    id: 1,
+    date: "2024-05-10 17:13",
+    card: "Mastercard 4201******6650",
+    sum: "— 13,50",
+    goal: "(Оплата) -Package 2 - to Traves Yoren",
+  },
+  {
+    id: 2,
+    date: "2024-05-13 11:35",
+    card: "Mastercard 4201******6650",
+    sum: "+ 11,50",
+    goal: "(возврат средств на карту)",
+  },
+  {
+    id: 3,
+    date: "2024-05-12 11:20",
+    card: "Mastercard 4201******6650",
+    sum: "— 11,50",
+    goal: "(Оплата)",
+  },
+  {
+    id: 4,
+    date: "2024-05-10 17:13",
+    card: "Mastercard 4201******6650",
+    sum: "— 13,50",
+    goal: "(Оплата) -Package 2 - to Traves Yoren",
+  },
+  {
+    id: 5,
+    date: "2024-05-13 11:35",
+    card: "Mastercard 4201******6650",
+    sum: "+ 11,50",
+    goal: "(возврат средств на карту)",
+  },
+  {
+    id: 6,
+    date: "2024-05-12 11:20",
+    card: "Mastercard 4201******6650",
+    sum: "— 11,50",
+    goal: "(Оплата)",
+  },
+];
+
+export type TItemHistory = {
+  id: number;
+  date: string;
+  card: string;
+  sum: string;
+  goal: string;
+};
+
 const SettingUserSubscription = () => {
   const { t } = translate("translate", { keyPrefix: "settingUserSubscription" });
 
   const [isAddNewBankCard, setIsAddNewBankCard] = useState(false);
   const [isShowAllHistory, setIsShowAllHistory] = useState(false);
+  const [historyOfPayment, setHistoryOfPayment] = useState(mockDataHistory.slice(0, 5));
 
   const subscriptionInfoFields = [
     { label: "nextPay", date: moment(mockDataSubscription.next_payment, "YYYY-MM-DD").format("DD.MM.YYYY") },
@@ -33,6 +88,15 @@ const SettingUserSubscription = () => {
 
   const handleCloseModal = () => {
     setIsAddNewBankCard(false);
+  };
+
+  const handleShowCollapseAllHistory = () => {
+    setIsShowAllHistory(!isShowAllHistory);
+    if (!isShowAllHistory) {
+      setHistoryOfPayment(mockDataHistory);
+    } else {
+      setHistoryOfPayment(mockDataHistory.slice(0, 5));
+    }
   };
 
   return (
@@ -60,6 +124,11 @@ const SettingUserSubscription = () => {
           <Balance />
         </Box>
         <UserBankCards cbHandleAddNewBankCard={handleOpenModal} />
+        <UserPaymentHistory
+          userHistory={historyOfPayment}
+          isShowAllHistory={isShowAllHistory}
+          cbHandleShowCollapseAllHistory={handleShowCollapseAllHistory}
+        />
       </Box>
     </>
   );

@@ -153,6 +153,7 @@
       "addCard": "Add a card",
       "historyOfPayment": "Payment history",
       "showAll": "Show all",
+      "collapse": "Collapse",
       "numberOfCard": "Card number",
       "name": "Holder name",
       "validityPeriod": "Expiration date",

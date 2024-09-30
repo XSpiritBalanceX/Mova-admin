@@ -211,4 +211,43 @@
       }
     }
   }
+  .historyOfPaymentBox {
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    border-radius: 15px;
+    padding: 20px;
+
+    margin: 20px 0 0 0;
+    .historyTitleControl {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 15px 0;
+      p {
+        margin: 0;
+        @extend %h1;
+      }
+      button {
+        padding: 0;
+        text-transform: none;
+        color: map-get($theme-colors, "main-blue");
+      }
+    }
+    .historyUserBox {
+      max-height: 275px;
+      overflow-y: auto;
+      .itemHistory {
+        margin: 0 0 15px 0;
+        .dateCardText {
+          @extend %body-2-regular;
+          color: map-get($theme-colors, "gray-3");
+          margin: 0 0 5px 0;
+        }
+        .sumGoalText {
+          @extend %h3;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
