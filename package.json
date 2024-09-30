@@ -24,6 +24,7 @@
     "moment": "^2.30.1",
     "moment-timezone": "^0.5.45",
     "react": "^18.3.1",
+    "react-credit-cards-2": "^1.0.3",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",
     "react-i18next": "^15.0.1",
@@ -31,9 +32,11 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.8.1",
+    "react-slick": "^0.30.2",
     "react-timezone-select": "^3.2.8",
     "react-toastify": "^10.0.5",
     "sass": "^1.78.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
@@ -63,6 +66,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-slick": "^0.23.13",
     "craco-alias": "^3.0.1"
   }
 }

@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Box } from "@mui/material";
 import { translate } from "@i18n";
 import moment from "moment";
 import Balance from "./Balance";
+import UserBankCards from "./UserBankCards";
 import "./SettingUserSubscription.scss";
 
 const mockDataSubscription = {
@@ -15,11 +17,23 @@ const mockDataSubscription = {
 const SettingUserSubscription = () => {
   const { t } = translate("translate", { keyPrefix: "settingUserSubscription" });
 
+  const [isAddNewBankCard, setIsAddNewBankCard] = useState(false);
+  const [isShowAllHistory, setIsShowAllHistory] = useState(false);
+
   const subscriptionInfoFields = [
     { label: "nextPay", date: moment(mockDataSubscription.next_payment, "YYYY-MM-DD").format("DD.MM.YYYY") },
     { label: "paymentMethod", date: mockDataSubscription.card },
     { label: "sum", date: mockDataSubscription.sum },
   ];
+
+  const handleOpenModal = () => {
+    setIsAddNewBankCard(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsAddNewBankCard(false);
+  };
+
   return (
     <Box className="settingSubscriptionBox">
       <Box className="subscriptionBalanceBox">
@@ -39,6 +53,7 @@ const SettingUserSubscription = () => {
         </Box>
         <Balance />
       </Box>
+      <UserBankCards cbHandleAddNewBankCard={handleOpenModal} />
     </Box>
   );
 };
