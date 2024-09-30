@@ -1,0 +1,127 @@
+@import "../../variables";
+
+.settingSubscriptionBox {
+  max-width: 620px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .subscriptionBalanceBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+    .subscriptionBox,
+    .balanceBox {
+      flex-basis: 49%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+      border-radius: 15px;
+      height: 181px;
+    }
+    .subscriptionBox {
+      .subscriptionTitle {
+        margin: 20px 15px 10px 15px;
+        @extend %h1;
+      }
+      .subscriptionNameDate {
+        margin: 0 15px 15px 15px;
+        @extend %body-2-regular;
+        span {
+          margin: 0 0 0 10px;
+          @extend %small-text;
+          padding: 5px 10px;
+          border-radius: 30px;
+          color: map-get($theme-colors, "main-blue");
+          background-color: map-get($theme-colors, "light-blue");
+        }
+      }
+      .subscriptionFieldsBox {
+        display: flex;
+        flex-direction: column;
+        .itemSubscriptionInfo {
+          display: flex;
+          flex-direction: row;
+          margin: 0 0 10px 0;
+          .itemSubscriptionTitle {
+            margin: 0 0 0 15px;
+            @extend %body-2-regular;
+            max-width: 171px;
+            width: 100%;
+            color: map-get($theme-colors, "gray-3");
+          }
+          .itemSubscriptionData {
+            @extend %body-2-regular;
+            margin: 0 15px 0 0;
+          }
+        }
+      }
+    }
+    .balanceBox {
+      .balanceTitle {
+        @extend %h1;
+        margin: 20px 15px 10px 15px;
+      }
+      .balanceCurrencyBox {
+        display: flex;
+        flex-direction: row;
+        margin: 0 15px 10px 15px;
+        .balanceField {
+          width: auto;
+          max-width: 90px;
+          .MuiInputBase-root.MuiInputBase-formControl {
+            height: 32px;
+            @extend %h1;
+            font-weight: 400;
+            font-size: 26px;
+            line-height: 32px;
+            width: auto;
+            padding: 0;
+            fieldset {
+              border: none;
+            }
+            input {
+              height: 32px;
+              padding: 0 5px;
+              width: auto;
+              &::placeholder {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+        .currencyField {
+          .MuiInputBase-root.MuiInputBase-formControl {
+            height: 32px;
+            @extend %h2;
+            line-height: 25px;
+            font-weight: 400;
+            fieldset {
+              border: none;
+            }
+            .MuiSelect-select {
+              padding: 0 25px 0 5px;
+            }
+          }
+        }
+      }
+      .balanceControlsBox {
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+        .depositButton {
+          @extend %button-1;
+          height: 40px;
+          @extend %btn;
+        }
+        .changButton {
+          @extend %btn;
+          text-transform: none;
+          color: map-get($theme-colors, "main-blue");
+          height: 40px;
+        }
+      }
+    }
+  }
+}

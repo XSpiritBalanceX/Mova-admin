@@ -138,6 +138,27 @@
       "noOneLessons": "You haven't booked any lessons",
       "noOneLessonsTeacher": "You have no lessons booked",
       "errorReason": "Please indicate the reason for canceling the lesson"
+    },
+    "settingUserSubscription": {
+      "subscription": "Subscription",
+      "activeTo": "Active until {{date}}",
+      "nextPay": "Next debit",
+      "paymentMethod": "Payment method",
+      "sum": "Sum",
+      "balance": "Balance",
+      "withdraw": "Withdraw",
+      "deposit": "Deposit",
+      "change": "Change",
+      "deleteCard": "Remove card",
+      "addCard": "Add a card",
+      "historyOfPayment": "Payment history",
+      "showAll": "Show all",
+      "numberOfCard": "Card number",
+      "name": "Holder name",
+      "validityPeriod": "Expiration date",
+      "add": "Add",
+      "errReqField": "Fill in the field",
+      "errValidityPeriod": "Expiration date is not valid"
     }
   }
 }

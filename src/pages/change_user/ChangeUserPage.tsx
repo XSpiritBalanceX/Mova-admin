@@ -9,6 +9,7 @@ import SettingProfileTeacher from "@components/settingProfileTeacher/SettingProf
 import SettingTeacherLanguages from "@components/settingTeacherLanguages/SettingTeacherLanguages";
 import SettingTeachSchedule from "@components/settingTeacherSchedule/SettingTeachSchedule";
 import SettingUserLessons from "@components/settingUserLessons/SettingUserLessons";
+import SettingUserSubscription from "@components/settingUserSubscription/SettingUserSubscription";
 import "./ChangeUserPage.scss";
 
 interface IChangeModules {
@@ -35,7 +36,7 @@ const ChangeUserPage = () => {
     languages_change: <SettingTeacherLanguages />,
     schedule: <SettingTeachSchedule />,
     schedule_change: <SettingTeachSchedule />,
-    sub_pay: <Box>sub_pay</Box>,
+    sub_pay: <SettingUserSubscription />,
     change_password: <Box>change_password</Box>,
   });
 

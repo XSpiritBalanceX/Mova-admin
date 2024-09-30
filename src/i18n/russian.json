@@ -138,6 +138,27 @@
       "noOneLessons": "Вы не записались ни на один урок",
       "noOneLessonsTeacher": "У Вас нет забронированных уроков",
       "errorReason": "Укажите причину отмены урока"
+    },
+    "settingUserSubscription": {
+      "subscription": "Подписка",
+      "activeTo": "Активна до {{date}}",
+      "nextPay": "Следующее списание",
+      "paymentMethod": "Способ оплаты",
+      "sum": "Сумма",
+      "balance": "Баланс",
+      "withdraw": "Вывести",
+      "deposit": "Внести",
+      "change": "Изменить",
+      "deleteCard": "Удалить карту",
+      "addCard": "Добавить карту",
+      "historyOfPayment": "История платежей",
+      "showAll": "Показать все",
+      "numberOfCard": "Номер карты",
+      "name": "Имя держателя",
+      "validityPeriod": "Срок действия",
+      "add": "Добавить",
+      "errReqField": "Заполните поле",
+      "errValidityPeriod": "Срок действия не валидный"
     }
   }
 }
