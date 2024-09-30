@@ -72,3 +72,90 @@
     }
   }
 }
+
+.modalAddNewCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contentAddNewCard {
+    background-color: map-get($theme-colors, "white");
+    padding: 10px 10px 30px 10px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    max-width: 612px;
+    .closeButtonBox {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        height: 24px;
+        width: 24px;
+        min-width: 24px;
+        color: map-get($theme-colors, "black");
+      }
+    }
+    .mainContentNewCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .titleNewCard {
+        @extend %h1;
+        margin: 0 0 15px 0;
+        text-align: center;
+      }
+      .formAddNewCard {
+        max-width: 430px;
+        width: 100%;
+        .doubledBox {
+          display: flex;
+          flex-direction: row;
+          .newBankCardField {
+            margin: 0 15px 0 0;
+            flex-basis: 57%;
+          }
+          .controlledFieldBox {
+            flex-basis: 40%;
+          }
+        }
+        .newBankCardField {
+          display: flex;
+          flex-direction: column;
+          margin-top: 15px;
+          .numberField {
+            all: unset;
+            height: 54px;
+            background-color: map-get($theme-colors, "white");
+            border-radius: 5px;
+            border: solid 1px map-get($theme-colors, "gray-2");
+            padding: 0 15px;
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            border-radius: 30px;
+            &::placeholder {
+              color: map-get($theme-colors, "gray-2");
+              @extend %body-2-regular;
+            }
+            &:focus {
+              border: solid 2px map-get($theme-colors, "main-blue");
+            }
+          }
+          .numberField.errorField {
+            border: solid 2px map-get($theme-colors, "red");
+          }
+          .errorMessage {
+            color: map-get($theme-colors, "red");
+            @extend %body-2-regular;
+          }
+        }
+        .submitNewCardButton {
+          width: 100%;
+          @extend %button-1;
+          @extend %btn;
+        }
+      }
+    }
+  }
+}

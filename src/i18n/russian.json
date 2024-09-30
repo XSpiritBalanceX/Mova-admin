@@ -158,7 +158,9 @@
       "validityPeriod": "Срок действия",
       "add": "Добавить",
       "errReqField": "Заполните поле",
-      "errValidityPeriod": "Срок действия не валидный"
+      "errValidityPeriod": "Срок действия не валидный",
+      "errLengthCVC": "Только 3 цифры",
+      "errNumber": "Только цифры"
     }
   }
 }

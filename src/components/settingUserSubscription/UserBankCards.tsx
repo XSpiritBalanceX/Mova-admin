@@ -90,12 +90,14 @@ const UserBankCards = ({ cbHandleAddNewBankCard }: IUserBankCardsProps) => {
           </Box>
         ))}
       </Slider>
-      <Button type="button" className="addCardButton" onClick={handleAddCard}>
-        <span>
+      <Box className="addCardButtonBox" onClick={handleAddCard}>
+        <p className="icon">
           <AddIcon />
-        </span>
-        {t("addCard")}
-      </Button>
+        </p>
+        <Button type="button" className="addCardButton">
+          {t("addCard")}
+        </Button>
+      </Box>
     </Box>
   );
 };

@@ -158,7 +158,9 @@
       "validityPeriod": "Expiration date",
       "add": "Add",
       "errReqField": "Fill in the field",
-      "errValidityPeriod": "Expiration date is not valid"
+      "errValidityPeriod": "Expiration date is not valid",
+      "errLengthCVC": "Only 3 digits",
+      "errNumber": "Only numbers"
     }
   }
 }

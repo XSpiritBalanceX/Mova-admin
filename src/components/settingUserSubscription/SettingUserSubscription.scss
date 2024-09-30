@@ -183,12 +183,16 @@
         }
       }
     }
-    .addCardButton {
-      text-transform: none;
-      @extend %btn;
-      color: map-get($theme-colors, "main-blue");
+    .addCardButtonBox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       margin: 20px 0 0 0;
-      span {
+      max-width: 174px;
+      &:hover {
+        cursor: pointer;
+      }
+      .icon {
         background-color: map-get($theme-colors, "main-blue");
         display: flex;
         align-items: center;
@@ -197,6 +201,13 @@
         padding: 7px;
         margin: 0 10px 0 0;
         color: map-get($theme-colors, "white");
+      }
+      .addCardButton {
+        text-transform: none;
+        @extend %btn;
+        color: map-get($theme-colors, "main-blue");
+        padding: 0;
+        width: auto;
       }
     }
   }

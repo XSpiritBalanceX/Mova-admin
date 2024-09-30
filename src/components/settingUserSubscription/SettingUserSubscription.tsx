@@ -4,6 +4,7 @@ import { translate } from "@i18n";
 import moment from "moment";
 import Balance from "./Balance";
 import UserBankCards from "./UserBankCards";
+import ModalNewBankCard from "@components/modal/ModalNewBankCard";
 import "./SettingUserSubscription.scss";
 
 const mockDataSubscription = {
@@ -35,26 +36,32 @@ const SettingUserSubscription = () => {
   };
 
   return (
-    <Box className="settingSubscriptionBox">
-      <Box className="subscriptionBalanceBox">
-        <Box className="subscriptionBox">
-          <p className="subscriptionTitle">{t("subscription")}</p>
-          <p className="subscriptionNameDate">
-            {mockDataSubscription.name}
-            <span>{t("activeTo", { date: moment(mockDataSubscription.date_end, "YYYY-MM-DD").format("D MMMM") })}</span>
-          </p>
-          <Box className="subscriptionFieldsBox">
-            {subscriptionInfoFields.map((el, ind) => (
-              <Box key={ind} className="itemSubscriptionInfo">
-                <p className="itemSubscriptionTitle">{t(el.label)}</p> <p className="itemSubscriptionData">{el.date}</p>
-              </Box>
-            ))}
+    <>
+      <ModalNewBankCard isOpen={isAddNewBankCard} cbCloseModal={handleCloseModal} />
+      <Box className="settingSubscriptionBox">
+        <Box className="subscriptionBalanceBox">
+          <Box className="subscriptionBox">
+            <p className="subscriptionTitle">{t("subscription")}</p>
+            <p className="subscriptionNameDate">
+              {mockDataSubscription.name}
+              <span>
+                {t("activeTo", { date: moment(mockDataSubscription.date_end, "YYYY-MM-DD").format("D MMMM") })}
+              </span>
+            </p>
+            <Box className="subscriptionFieldsBox">
+              {subscriptionInfoFields.map((el, ind) => (
+                <Box key={ind} className="itemSubscriptionInfo">
+                  <p className="itemSubscriptionTitle">{t(el.label)}</p>{" "}
+                  <p className="itemSubscriptionData">{el.date}</p>
+                </Box>
+              ))}
+            </Box>
           </Box>
+          <Balance />
         </Box>
-        <Balance />
+        <UserBankCards cbHandleAddNewBankCard={handleOpenModal} />
       </Box>
-      <UserBankCards cbHandleAddNewBankCard={handleOpenModal} />
-    </Box>
+    </>
   );
 };
 

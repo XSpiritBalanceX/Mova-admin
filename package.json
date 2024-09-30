@@ -8,6 +8,7 @@
     "@hookform/resolvers": "^3.9.0",
     "@mui/icons-material": "^6.0.2",
     "@mui/material": "^6.0.2",
+    "@react-input/mask": "^1.2.10",
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
