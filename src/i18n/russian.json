@@ -119,6 +119,25 @@
       "lessonDuration": "Длительность занятий 55 минут",
       "chooseTimeZone": "Выберите ваш часовой пояс",
       "chooseLanguage": "Выберите язык"
+    },
+    "settingUserLessons": {
+      "myLessons": "Мои уроки",
+      "allLessons": "Все уроки",
+      "upcomingLessons": "Ближайшие уроки",
+      "cancelLesson": "Отменить урок",
+      "pastLessons": "Прошедшие уроки",
+      "paid": "Оплачено",
+      "notPayed": "Не оплачено",
+      "lessonCanceled": "Урок отменен",
+      "cancellingLesson": "Отмена урока",
+      "reason": "Чтобы отменить урок необходимо указать причину ",
+      "enterText": "Введите текст",
+      "close": "Закрыть",
+      "sucRequest": "Ваш урок был успешно отменен",
+      "errRequest": "Возникла непредвиденная ошибка",
+      "noOneLessons": "Вы не записались ни на один урок",
+      "noOneLessonsTeacher": "У Вас нет забронированных уроков",
+      "errorReason": "Укажите причину отмены урока"
     }
   }
 }

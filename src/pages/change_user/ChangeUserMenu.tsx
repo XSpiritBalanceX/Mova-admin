@@ -52,7 +52,11 @@ const ChangeUserMenu = () => {
   }
 
   const handleNavigateChanges = (e: React.MouseEvent<HTMLButtonElement>) => {
-    navigate(`/user/${user_id}/${e.currentTarget.name}`);
+    if (e.currentTarget.name === "lessons") {
+      navigate(`/user/${user_id}/lessons_1`);
+    } else {
+      navigate(`/user/${user_id}/${e.currentTarget.name}`);
+    }
   };
 
   return (
@@ -66,7 +70,7 @@ const ChangeUserMenu = () => {
           name={el.name}
           type="button"
           onClick={handleNavigateChanges}
-          className={type === el.name ? "activeButton" : ""}
+          className={(type as string).includes(el.name) ? "activeButton" : ""}
         >
           {t(el.title)}
         </Button>
