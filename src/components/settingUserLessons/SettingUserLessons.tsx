@@ -3,6 +3,7 @@ import { Box, Pagination } from "@mui/material";
 import { translate } from "@i18n";
 import { useNavigate, useParams } from "react-router-dom";
 import CardLesson from "./CardLesson";
+import ModalCancelLesson from "@components/modal/ModalCancelLesson";
 import "./SettingUserLessons.scss";
 
 const mockData = {
@@ -140,31 +141,36 @@ const SettingUserLessons = () => {
   };
 
   return (
-    <Box className="userLessonsBox">
-      {mockData.items.length === 0 && (
-        <Box className="emptyDataBox">
-          <p>{t(isStudent ? "noOneLessons" : "noOneLessonsTeacher")}</p>
-        </Box>
+    <>
+      {selectedLesson && (
+        <ModalCancelLesson isOpen={isOpenModal} cbCloseModal={handleCloseModal} lesson={selectedLesson} />
       )}
-      {mockData.items.length !== 0 && (
-        <Box className="lessonsCardBox">
-          <p className="titleLessons">{t("upcomingLessons")}</p>
-          {mockData.items.map((el, ind) => (
-            <CardLesson key={ind} lesson_information={el} cbShowModal={handleShowModal} />
-          ))}
-        </Box>
-      )}
-      {pagesPagination > 0 && (
-        <Box className="paginationBox">
-          <Pagination
-            count={pagesPagination}
-            page={Number(page)}
-            onChange={handleChangePage}
-            className="searchPagination"
-          />
-        </Box>
-      )}
-    </Box>
+      <Box className="userLessonsBox">
+        {mockData.items.length === 0 && (
+          <Box className="emptyDataBox">
+            <p>{t(isStudent ? "noOneLessons" : "noOneLessonsTeacher")}</p>
+          </Box>
+        )}
+        {mockData.items.length !== 0 && (
+          <Box className="lessonsCardBox">
+            <p className="titleLessons">{t("upcomingLessons")}</p>
+            {mockData.items.map((el, ind) => (
+              <CardLesson key={ind} lesson_information={el} cbShowModal={handleShowModal} />
+            ))}
+          </Box>
+        )}
+        {pagesPagination > 0 && (
+          <Box className="paginationBox">
+            <Pagination
+              count={pagesPagination}
+              page={Number(page)}
+              onChange={handleChangePage}
+              className="searchPagination"
+            />
+          </Box>
+        )}
+      </Box>
+    </>
   );
 };
 
