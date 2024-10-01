@@ -189,7 +189,8 @@
       "methodPayment": "Payment method",
       "subscriptionUpdateUntil": "(subscription updated to {{date}})",
       "back": "Back",
-      "next": "Next"
+      "next": "Next",
+      "emptyPayments": "No users found"
     }
   }
 }

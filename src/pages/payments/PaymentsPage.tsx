@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
-import { Container, Box, Table, TableHead, TableRow, TableCell } from "@mui/material";
+import { Container, Box, Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
 import ControlsPayments from "@components/controlsPayments/ControlsPayments";
+import PaymentsItem from "@components/paymentItem/PaymentsItem";
+import CustomPagination from "@components/pagination/CustomPagination";
 import "./PaymentsPage.scss";
 
 const mockData = [
@@ -13,7 +15,7 @@ const mockData = [
     last_name: "Kuznetsov",
     status: "0",
     email: "example@gmail.com",
-    last_payment: "2024-09-12",
+    last_payment: "2024-10-12",
     card: "Visa ****2979",
   },
   {
@@ -31,7 +33,7 @@ const mockData = [
     last_name: "Kuznetsov",
     status: "1",
     email: "example@gmail.com",
-    last_payment: "2024-09-12",
+    last_payment: "2024-10-12",
     card: "Visa ****2979",
   },
   {
@@ -40,7 +42,7 @@ const mockData = [
     last_name: "Kuznetsov",
     status: "0",
     email: "example@gmail.com",
-    last_payment: "2024-09-12",
+    last_payment: "2024-10-12",
     card: "Visa ****2979",
   },
   {
@@ -58,7 +60,7 @@ const mockData = [
     last_name: "Kuznetsov",
     status: "0",
     email: "example@gmail.com",
-    last_payment: "2024-09-12",
+    last_payment: "2024-10-12",
     card: "Visa ****2979",
   },
 ];
@@ -101,7 +103,37 @@ const PaymentsPage = () => {
               ))}
             </TableRow>
           </TableHead>
+          <TableBody>
+            {payments.length !== 0 ? (
+              payments.map((el, ind) => (
+                <PaymentsItem
+                  key={ind}
+                  id={el.id}
+                  first_name={el.first_name}
+                  last_name={el.last_name}
+                  email={el.email}
+                  status={el.status}
+                  last_payment={el.last_payment}
+                  payment_method={el.card}
+                />
+              ))
+            ) : (
+              <TableRow className="emptyRowUsers">
+                <TableCell colSpan={headColumns.length}>
+                  <p>{t("emptyPayments")}</p>
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
         </Table>
+        <CustomPagination
+          count={mockData.length}
+          itemsPerPage={paymentPerPage}
+          urlPage={`/payments/${type}`}
+          activePage={page as string}
+          nameBtnBack={t("back")}
+          nameBtnNext={t("next")}
+        />
       </Box>
     </Container>
   );

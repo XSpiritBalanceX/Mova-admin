@@ -189,7 +189,8 @@
       "methodPayment": "Способ оплаты",
       "subscriptionUpdateUntil": "(подписка обновлена до {{date}})",
       "back": "Назад",
-      "next": "Далее"
+      "next": "Далее",
+      "emptyPayments": "Пользователи не найдены"
     }
   }
 }
