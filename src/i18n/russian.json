@@ -162,6 +162,19 @@
       "errValidityPeriod": "Срок действия не валидный",
       "errLengthCVC": "Только 3 цифры",
       "errNumber": "Только цифры"
+    },
+    "settingUserPassword": {
+      "enterOldPassword": "Введите старый пароль",
+      "createNewPassword": "Придумайте новый пароль",
+      "password": "Пароль",
+      "newPassword": "Новый пароль",
+      "confirmNewPassword": "Подтвердите новый пароль",
+      "saveChanges": "Сохранить изменения",
+      "errReqField": "Заполните поле",
+      "wrongFormatPassword": "Только цифры, заглавные и строчные латинские буквы",
+      "passDontMatch": "Пароли не совпадают",
+      "passMin": "Пароль должен состоять из 8 символов",
+      "passMax": "Пароль не может иметь больше 32 символов"
     }
   }
 }

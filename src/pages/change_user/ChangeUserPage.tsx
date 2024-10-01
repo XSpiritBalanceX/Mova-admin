@@ -10,6 +10,7 @@ import SettingTeacherLanguages from "@components/settingTeacherLanguages/Setting
 import SettingTeachSchedule from "@components/settingTeacherSchedule/SettingTeachSchedule";
 import SettingUserLessons from "@components/settingUserLessons/SettingUserLessons";
 import SettingUserSubscription from "@components/settingUserSubscription/SettingUserSubscription";
+import SettingUserPassword from "@components/settingUserPassword/SettingUserPassword";
 import "./ChangeUserPage.scss";
 
 interface IChangeModules {
@@ -37,7 +38,7 @@ const ChangeUserPage = () => {
     schedule: <SettingTeachSchedule />,
     schedule_change: <SettingTeachSchedule />,
     sub_pay: <SettingUserSubscription />,
-    change_password: <Box>change_password</Box>,
+    change_password: <SettingUserPassword />,
   });
 
   useEffect(() => {
