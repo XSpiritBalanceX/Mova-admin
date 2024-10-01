@@ -13,10 +13,15 @@ const Menu = () => {
 
   const { pathname } = useLocation();
 
+  const handleClick = () => {
+    localStorage.removeItem("mova_admin_user_type");
+  };
+
   return (
     <Box className="menuBox">
       <NavLink
         to={"/users/all/1"}
+        onClick={handleClick}
         className={() =>
           pathname.includes("users") || pathname.includes("user") || pathname.includes("create_admin")
             ? "nav-link active"
@@ -32,22 +37,35 @@ const Menu = () => {
         />
         {t("users")}
       </NavLink>
-      <NavLink to={"/payments"} className={() => (pathname.includes("payments") ? "nav-link active" : "nav-link")}>
+      <NavLink
+        to={"/payments"}
+        onClick={handleClick}
+        className={() => (pathname.includes("payments") ? "nav-link active" : "nav-link")}
+      >
         <PaymentIcon fill={pathname.includes("payments") ? "#FFFFFF" : "#A2A2A2"} />
         {t("payments")}
       </NavLink>
       <NavLink
         to={"/notifications"}
+        onClick={handleClick}
         className={() => (pathname.includes("notifications") ? "nav-link active" : "nav-link")}
       >
         <BelIcon fill={pathname.includes("notifications") ? "#FFFFFF" : "#A2A2A2"} />
         {t("notifications")}
       </NavLink>
-      <NavLink to={"/support"} className={() => (pathname.includes("support") ? "nav-link active" : "nav-link")}>
+      <NavLink
+        to={"/support"}
+        onClick={handleClick}
+        className={() => (pathname.includes("support") ? "nav-link active" : "nav-link")}
+      >
         <SupportIcon fill={pathname.includes("support") ? "#FFFFFF" : "#A2A2A2"} />
         {t("support")}
       </NavLink>
-      <NavLink to={"/settings"} className={() => (pathname.includes("settings") ? "nav-link active" : "nav-link")}>
+      <NavLink
+        to={"/settings"}
+        onClick={handleClick}
+        className={() => (pathname.includes("settings") ? "nav-link active" : "nav-link")}
+      >
         <SettingIcon fill={pathname.includes("settings") ? "#FFFFFF" : "#A2A2A2"} />
         {t("settings")}
       </NavLink>

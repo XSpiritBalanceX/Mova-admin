@@ -4,6 +4,7 @@ import ProtectedRouterForLogged from "./ProtectedRouterForLogged";
 import AuthPage from "@pages/auth/AuthPage";
 import UsersPage from "@pages/users/UsersPage";
 import CreateAdminPage from "@pages/create_admin/CreateAdminPage";
+import ChangeUserPage from "@pages/change_user/ChangeUserPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
@@ -14,6 +15,7 @@ const RouterComponent = () => {
   const authRoutes = [
     { path: "/users/:type/:page", element: <UsersPage /> },
     { path: "/create_admin", element: <CreateAdminPage /> },
+    { path: "/user/:user_id/:type", element: <ChangeUserPage /> },
   ];
 
   return (

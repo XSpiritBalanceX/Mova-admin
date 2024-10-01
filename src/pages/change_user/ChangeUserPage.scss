@@ -1,0 +1,34 @@
+@import "../../variables";
+
+.containerChangeUser {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentChangeUser {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    .changeUserMenuBox {
+      margin: 0 0 25px 0;
+      button {
+        text-transform: none;
+        @extend %medium-text;
+        padding: 5px 15px;
+        min-width: 24px;
+        color: map-get($theme-colors, "dark-gray");
+        border-radius: 20px;
+        margin: 0 10px 0 0;
+      }
+      .navigateButton {
+        color: map-get($theme-colors, "black");
+        padding: 0;
+        margin: 0 10px 0 0;
+      }
+      .activeButton {
+        @extend %h2;
+        color: map-get($theme-colors, "main-blue");
+        background-color: map-get($theme-colors, "light-blue");
+      }
+    }
+  }
+}

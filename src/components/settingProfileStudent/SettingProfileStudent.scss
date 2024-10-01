@@ -1,0 +1,106 @@
+@import "../../variables";
+
+.settingProfileStudentBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .buttonAvatarBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .navigationButton {
+      padding: 0;
+      color: map-get($theme-colors, "black");
+      margin: 0 20px 0 0;
+      min-width: 24px;
+    }
+  }
+  .studentLanguagesBox {
+    .addLanguageButton {
+      padding: 0;
+      text-transform: none;
+      @extend %h3;
+      color: map-get($theme-colors, "main-blue");
+      span {
+        width: 25px;
+        height: 26px;
+        background-color: map-get($theme-colors, "main-blue");
+        border-radius: 100%;
+        margin: 0 10px 0 0;
+        svg {
+          fill: map-get($theme-colors, "white");
+        }
+      }
+    }
+    .studentLanguageRow {
+      margin: 0 0 24px 0;
+      .itemStudentLanguage {
+        display: flex;
+        flex-direction: column;
+        .labelLanguage {
+          @extend %body-1-medium;
+          color: map-get($theme-colors, "black");
+          margin: 0 0 5px 0;
+        }
+        .labelLanguage.errorLabel,
+        .errorMessage {
+          color: map-get($theme-colors, "red");
+        }
+        .errorMessage {
+          @extend %regular-text;
+        }
+        .controlledField.goalField {
+          .MuiInputBase-root {
+            border: none;
+            border-radius: 30px;
+            fieldset {
+              border: solid 1px map-get($theme-colors, "gray-3");
+            }
+          }
+          .MuiInputBase-root.Mui-error {
+            border: none;
+            fieldset {
+              border: solid 2px map-get($theme-colors, "red");
+            }
+          }
+          .MuiInputBase-root:hover {
+            fieldset {
+              border: solid 1px map-get($theme-colors, "gray-3");
+            }
+          }
+          .MuiInputBase-root.Mui-focused {
+            border: none;
+            fieldset {
+              border: solid 2px map-get($theme-colors, "main-blue");
+            }
+          }
+          .MuiInputBase-root.Mui-focused:hover {
+            fieldset {
+              border: solid 1px map-get($theme-colors, "main-blue");
+            }
+          }
+        }
+      }
+      .deleteLanguageBox {
+        margin: 10px 0 0 0;
+        button {
+          padding: 0;
+          text-transform: none;
+          @extend %btn;
+          color: map-get($theme-colors, "red");
+          span {
+            margin: 0 7px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .submitButtonProfile {
+    margin: 20px 0 0 0;
+    @extend %button-1;
+    width: 100%;
+    @extend %btn;
+  }
+}

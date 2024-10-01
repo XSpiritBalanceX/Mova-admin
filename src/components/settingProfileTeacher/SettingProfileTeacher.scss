@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.settingProfileTeacherBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .buttonAvatarBox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    .navigationButton {
+      padding: 0;
+      color: map-get($theme-colors, "black");
+      margin: 0 20px 0 0;
+      min-width: 24px;
+    }
+  }
+  .submitButtonProfile {
+    margin: 20px 0 0 0;
+    @extend %button-1;
+    width: 100%;
+    @extend %btn;
+  }
+}

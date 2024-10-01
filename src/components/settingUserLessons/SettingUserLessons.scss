@@ -1,0 +1,134 @@
+@import "../../variables";
+
+.userLessonsBox {
+  max-width: 515px;
+  margin: 0 0 40px 0;
+  .emptyDataBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      margin: 0;
+      @extend %h1;
+      @media all and (max-width: 40em) {
+        text-align: center;
+      }
+    }
+  }
+  .lessonsCardBox {
+    .titleLessons {
+      @extend %h1;
+      margin: 0 0 10px 0;
+    }
+    .lessonBox {
+      padding: 20px;
+      margin: 0 0 20px 0;
+      box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+      width: calc(100% - 40px);
+      display: flex;
+      flex-direction: column;
+      border-radius: 15px;
+      .dateCancelBox {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .dateOfLesson {
+          @extend %body-1-medium;
+          color: map-get($theme-colors, "main-blue");
+          margin: 0;
+          .statusText {
+            margin: 0 0 0 10px;
+            padding: 5px 7px;
+            border-radius: 20px;
+          }
+          .statusText.paidText {
+            color: map-get($theme-colors, "green");
+            background-color: map-get($theme-colors, "light-green");
+          }
+          .statusText.notPaidText {
+            color: map-get($theme-colors, "red");
+            background-color: map-get($theme-colors, "light-red");
+          }
+        }
+        .cancelButton {
+          padding: 0;
+          text-transform: none;
+          @extend %body-2-bold;
+          color: map-get($theme-colors, "main-blue");
+        }
+      }
+      .lessonContent {
+        margin: 10px 0 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        .userInformationBox {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .userAvatar,
+          .emptyUserAvatarPhoto {
+            width: 60px;
+            height: 60px;
+            margin: 0 10px 0 0;
+          }
+          .emptyUserAvatarPhoto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @extend %h1;
+            border-radius: 50%;
+            color: map-get($theme-colors, "main-blue");
+            background-color: map-get($theme-colors, "gray-4");
+          }
+          .userName {
+            margin: 0;
+            @extend %body-2-regular;
+          }
+        }
+      }
+    }
+  }
+  .paginationBox {
+    width: 100%;
+    margin-top: 60px;
+    .searchPagination {
+      margin: 0 auto;
+      .MuiPagination-ul {
+        justify-content: center;
+        li {
+          .MuiButtonBase-root {
+            border: solid 1px map-get($theme-colors, "gray-2");
+            width: 44px;
+            height: 44px;
+            border-radius: 100%;
+            @extend %body-2-regular;
+            svg {
+              font-size: 28px;
+            }
+          }
+          .MuiButtonBase-root.Mui-selected,
+          .MuiButtonBase-root.MuiPaginationItem-previousNext {
+            background-color: map-get($theme-colors, "main-blue");
+            color: map-get($theme-colors, "white");
+            border: solid 1px map-get($theme-colors, "main-blue");
+          }
+          .MuiButtonBase-root.Mui-disabled {
+            background-color: map-get($theme-colors, "gray-1");
+            color: map-get($theme-colors, "white");
+            opacity: 1;
+            border: solid 1px map-get($theme-colors, "gray-1");
+          }
+        }
+        li:first-child {
+          margin-right: 15px;
+        }
+        li:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}

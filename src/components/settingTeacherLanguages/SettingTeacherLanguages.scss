@@ -1,0 +1,234 @@
+@import "../../variables";
+
+.languagesSettingsBox {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .buttonsNavigateBox {
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    button {
+      text-transform: none;
+      @extend %btn;
+      padding: 0;
+      color: map-get($theme-colors, "black");
+      min-width: 24px;
+    }
+  }
+  .buttonsNavigateBox.languageChangeButton {
+    justify-content: flex-end;
+    button {
+      color: map-get($theme-colors, "main-blue");
+    }
+  }
+  .viewLanguageItem {
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    margin: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 15px;
+    .viewLanguageItem:last-child {
+      margin: 0;
+    }
+    .languageInformationBox {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 15px 0;
+      .titleText {
+        margin: 0 20px 0 0;
+        max-width: 180px;
+        width: 100%;
+        color: map-get($theme-colors, "gray-3");
+        @extend %body-2-regular;
+      }
+      .dataText {
+        margin: 0;
+        @extend %body-1-medium;
+        width: calc(100% - 160px);
+      }
+    }
+    .languageInformationBox.certificatesItemBox {
+      flex-direction: column;
+      .certificatesBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+          width: 70px;
+          height: 70px;
+          margin: 10px 10px 0 0;
+        }
+        .certificatesBox:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .formTeacherLanguages {
+    width: 100%;
+    .teacherLanguageRow {
+      margin: 0 0 24px 0;
+      .itemTeacherLanguage {
+        display: flex;
+        flex-direction: column;
+        .labelLanguage {
+          @extend %body-1-medium;
+          color: map-get($theme-colors, "black");
+          margin: 0 0 5px 0;
+        }
+        .labelLanguage.errorLabel,
+        .errorMessage {
+          color: map-get($theme-colors, "red");
+        }
+        .errorMessage {
+          @extend %body-2-regular;
+        }
+        .controlledField.skillField {
+          .MuiInputBase-root {
+            border: none;
+            border-radius: 30px;
+            fieldset {
+              border: solid 1px map-get($theme-colors, "gray-3");
+            }
+          }
+          .MuiInputBase-root.Mui-error {
+            border: none;
+            fieldset {
+              border: solid 2px map-get($theme-colors, "red");
+            }
+          }
+          .MuiInputBase-root:hover {
+            fieldset {
+              border: solid 1px map-get($theme-colors, "gray-3");
+            }
+          }
+          .MuiInputBase-root.Mui-focused {
+            border: none;
+            fieldset {
+              border: solid 2px map-get($theme-colors, "main-blue");
+            }
+          }
+          .MuiInputBase-root.Mui-focused:hover {
+            fieldset {
+              border: solid 1px map-get($theme-colors, "main-blue");
+            }
+          }
+        }
+      }
+      .certificateBox {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 20px 0;
+        .certificateTitle {
+          @extend %body-1-medium;
+          color: map-get($theme-colors, "black");
+          margin: 0 0 10px 0;
+        }
+        .certificateItemBox {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          margin: 0 0 10px 0;
+          img {
+            width: 80px;
+            height: 80px;
+            margin: 0 10px 0 0;
+          }
+          .certificateNameSizeBox {
+            margin: 3px 5px 0 0;
+            .certificateName,
+            .certificateSize {
+              @extend %body-2-regular;
+            }
+            .certificateName {
+              margin: 0 0 10px 0;
+            }
+            .certificateSize {
+              color: map-get($theme-colors, "gray-3");
+            }
+          }
+          .deleteCertificateButton {
+            padding: 0;
+            min-width: 24px;
+            height: 24px;
+            width: 24px;
+            color: map-get($theme-colors, "gray-3");
+            svg {
+              font-size: 17px;
+            }
+          }
+        }
+        .errorMessage {
+          color: map-get($theme-colors, "red");
+          @extend %body-2-regular;
+        }
+        .addCertificateBox {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .labelCertificate {
+            width: 25px;
+            height: 25px;
+            margin: 0 10px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            background-color: map-get($theme-colors, "main-blue");
+            color: map-get($theme-colors, "white");
+            @extend %button-1;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          p {
+            margin: 0;
+            @extend %body-2-regular;
+            color: map-get($theme-colors, "gray-3");
+          }
+        }
+      }
+      .deleteLanguageBox {
+        margin: 10px 0 0 0;
+        button {
+          padding: 0;
+          text-transform: none;
+          @extend %btn;
+          color: map-get($theme-colors, "red");
+          span {
+            margin: 0 7px 0 0;
+          }
+        }
+      }
+    }
+    .addLanguageButton {
+      padding: 0;
+      text-transform: none;
+      @extend %h3;
+      color: map-get($theme-colors, "main-blue");
+      span {
+        width: 25px;
+        height: 25px;
+        background-color: map-get($theme-colors, "main-blue");
+        border-radius: 100%;
+        margin: 0 10px 0 0;
+        svg {
+          fill: map-get($theme-colors, "white");
+        }
+      }
+    }
+    .submitButtonBox {
+      margin: 30px 0 0 0;
+      button {
+        @extend %button-1;
+        width: 100%;
+        @extend %btn;
+      }
+    }
+  }
+}

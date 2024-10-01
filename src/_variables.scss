@@ -10,7 +10,11 @@ $theme-colors: (
   "gray-1": #dbdada,
   "gray-2": #a1a1a1,
   "gray-3": #a2a2a2,
+  "gray-4": #ecebeb,
   "red": #c60202,
+  "light-red": #ffd9d7,
+  "green": #18b53b,
+  "light-green": #ddffe5,
   "box-shadow": (
     "shadow": (
       3px 12px 24px rgba(129, 137, 197, 0.2),
@@ -70,6 +74,30 @@ $theme-colors: (
 }
 
 %h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+%body-1-medium {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+%body-2-regular {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+%body-2-bold {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;

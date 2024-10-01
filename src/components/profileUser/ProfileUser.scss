@@ -1,0 +1,65 @@
+@import "../../variables";
+
+.containerProfileStudent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  margin: 0 0 40px 0;
+  .userAvatarBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 20px 0;
+    .userAvatar,
+    .emptyUserAvatar {
+      width: 100px;
+      height: 100px;
+    }
+    .emptyUserAvatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: map-get($theme-colors, "gray-1");
+      border-radius: 100%;
+      @extend %title;
+      color: map-get($theme-colors, "main-blue");
+    }
+    button {
+      text-transform: none;
+      padding: 0;
+      @extend %h3;
+      color: map-get($theme-colors, "main-blue");
+    }
+  }
+  .informationBox {
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    margin: 0 0 25px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border-radius: 15px;
+    .itemInformationBox:last-child {
+      margin: 0;
+    }
+    .itemInformationBox {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 15px 0;
+      .titleText {
+        margin: 0 20px 0 0;
+        max-width: 140px;
+        width: 100%;
+        color: map-get($theme-colors, "gray-3");
+        @extend %body-2-regular;
+      }
+      .dataText {
+        margin: 0;
+        @extend %body-1-medium;
+        width: calc(100% - 160px);
+      }
+    }
+  }
+}
