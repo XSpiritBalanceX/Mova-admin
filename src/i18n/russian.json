@@ -175,6 +175,21 @@
       "passDontMatch": "Пароли не совпадают",
       "passMin": "Пароль должен состоять из 8 символов",
       "passMax": "Пароль не может иметь больше 32 символов"
+    },
+    "paymentsPage": {
+      "all": "Все",
+      "teachers": "Преподаватели",
+      "students": "Ученики",
+      "teacher": "Преподаватель",
+      "student": "Ученик",
+      "searchUser": "Поиск пользователя",
+      "firstLastName": "Имя Фамилия",
+      "status": "Статус",
+      "lastPayment": "Последний платёж",
+      "methodPayment": "Способ оплаты",
+      "subscriptionUpdateUntil": "(подписка обновлена до {{date}})",
+      "back": "Назад",
+      "next": "Далее"
     }
   }
 }
