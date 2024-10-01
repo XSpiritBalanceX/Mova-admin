@@ -3,6 +3,7 @@ import { Container, Box, Table, TableHead, TableRow, TableCell } from "@mui/mate
 import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
+import ControlsPayments from "@components/controlsPayments/ControlsPayments";
 import "./PaymentsPage.scss";
 
 const mockData = [
@@ -91,6 +92,7 @@ const PaymentsPage = () => {
     <Container className="containerPaymentsPage">
       <Menu />
       <Box className="contentPaymentsPage">
+        <ControlsPayments searchWord={searchWord} cbHandleChangeSearch={handleChangeSearch} />
         <Table className="paymentsTable">
           <TableHead className="paymentsTableHead">
             <TableRow>
