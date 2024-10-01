@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.paymentItemRow {
+  padding: 0;
+  vertical-align: top;
+  margin-bottom: 15px !important;
+  box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+  border-radius: 15px;
+  height: 103px;
+  td {
+    border: none;
+    padding: 0;
+  }
+  .paymentItemBox {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .lastPaymentBox {
+    max-width: 182px;
+  }
+  .overduePayment {
+    color: map-get($theme-colors, "red");
+  }
+  .actualPayment {
+    color: map-get($theme-colors, "green");
+  }
+}

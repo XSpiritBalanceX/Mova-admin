@@ -175,6 +175,22 @@
       "passDontMatch": "Passwords don't match",
       "passMin": "Password must be 8 characters",
       "passMax": "Password cannot have more than 32 characters"
+    },
+    "paymentsPage": {
+      "all": "All",
+      "teachers": "Teachers",
+      "students": "Students",
+      "teacher": "Teacher",
+      "student": "Student",
+      "searchUser": "Search for a user",
+      "firstLastName": "First Last Name",
+      "status": "Status",
+      "lastPayment": "Last payment",
+      "methodPayment": "Payment method",
+      "subscriptionUpdateUntil": "(subscription updated to {{date}})",
+      "back": "Back",
+      "next": "Next",
+      "emptyPayments": "No users found"
     }
   }
 }

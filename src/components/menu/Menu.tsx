@@ -38,7 +38,7 @@ const Menu = () => {
         {t("users")}
       </NavLink>
       <NavLink
-        to={"/payments"}
+        to={"/payments/all/1"}
         onClick={handleClick}
         className={() => (pathname.includes("payments") ? "nav-link active" : "nav-link")}
       >
