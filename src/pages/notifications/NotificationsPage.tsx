@@ -3,6 +3,7 @@ import { Container, Box, Table, TableHead, TableRow, TableCell, TableBody } from
 import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
+import ControlsNotification from "@components/controlsNotifications/ControlsNotification";
 import "./NotificationsPage.scss";
 
 const mockData = [
@@ -116,7 +117,9 @@ const NotificationsPage = () => {
   return (
     <Container className="notificationsPageContainer">
       <Menu />
-      <Box className="contentNotificationsPage"></Box>
+      <Box className="contentNotificationsPage">
+        <ControlsNotification searchWord={searchWord} cbHandleChangeSearch={handleChangeSearch} />
+      </Box>
     </Container>
   );
 };
