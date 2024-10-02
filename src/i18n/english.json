@@ -191,6 +191,23 @@
       "back": "Back",
       "next": "Next",
       "emptyPayments": "No users found"
+    },
+    "notificationsPage": {
+      "searchUser": "Search for a user",
+      "date": "Date",
+      "time": "Time",
+      "firstLastName": "First Last Name",
+      "status": "Status",
+      "notification": "Notification",
+      "back": "Back",
+      "next": "Next",
+      "emptyNotifications": "No users found",
+      "typeNotification": "Notification type",
+      "notificationLesson": "Lesson reminder",
+      "canceledLesson": "Canceling a lesson",
+      "textNotification": "Notification text",
+      "teacher": "Teacher",
+      "student": "Student"
     }
   }
 }

@@ -1,0 +1,44 @@
+@import "../../variables";
+
+.notificationItemRow {
+  padding: 0;
+  vertical-align: top;
+  margin-bottom: 20px !important;
+  box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+  border-radius: 15px;
+  height: 82px;
+  td {
+    border: none;
+    padding: 0;
+  }
+  .notificationItemBox {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .buttonInfo {
+      text-transform: none;
+      color: map-get($theme-colors, "main-blue");
+      padding: 0;
+      border-radius: 0;
+      svg {
+        fill: map-get($theme-colors, "main-blue");
+        margin: 0 7px 0 0;
+      }
+    }
+  }
+  .notificationItemTypeText {
+    p {
+      margin: 0;
+      width: 100%;
+      min-width: 200px;
+    }
+    .notificationText {
+      @extend %body-2-regular;
+      color: map-get($theme-colors, "gray-3");
+    }
+  }
+  .userNameBox {
+    min-width: 135px;
+  }
+}

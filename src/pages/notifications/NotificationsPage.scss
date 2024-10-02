@@ -1,0 +1,102 @@
+@import "../../variables";
+
+.notificationsPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentNotificationsPage {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    .notificationsTable {
+      border-collapse: separate;
+      border-spacing: 0 20px;
+      .notificationsTableHead {
+        tr {
+          th {
+            border: none;
+            color: map-get($theme-colors, "gray-3");
+            padding-bottom: 15px;
+            padding-top: 0;
+            @extend %medium-text;
+          }
+        }
+      }
+      .emptyRowUsers {
+        td {
+          border: none;
+          border-radius: 20px;
+          background-color: map-get($theme-colors, "white");
+          padding: 25px;
+          height: 90px;
+          p {
+            margin: 0;
+            @extend %medium-text;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.notificationItemPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentNotificationItem {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    .navigationButtonBox {
+      margin: 0 0 20px 0;
+      button {
+        text-transform: none;
+        @extend %h2;
+        color: map-get($theme-colors, "black");
+        padding: 0;
+        svg {
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+    .notificationInfoBox {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 40px 0;
+      .itemInfoNotification {
+        margin: 0 50px 0 0;
+        .labelText {
+          margin: 0 0 10px 0;
+          @extend %body-1-regular;
+          color: map-get($theme-colors, "gray-3");
+        }
+        .dataText {
+          margin: 0;
+          @extend %body-1-medium;
+        }
+      }
+      .itemInfoNotification:last-child {
+        margin-right: 0;
+      }
+    }
+    .textNotificationBox {
+      display: flex;
+      flex-direction: column;
+      .labelTextNotification {
+        margin: 0 0 10px 0;
+        @extend %body-1-regular;
+        color: map-get($theme-colors, "gray-3");
+      }
+      .dataTextNotificationBox {
+        @extend %body-1-medium;
+        padding: 15px;
+        max-width: 430px;
+        width: 100%;
+        border: solid 1px map-get($theme-colors, "gray-3");
+        border-radius: 30px;
+      }
+    }
+  }
+}
