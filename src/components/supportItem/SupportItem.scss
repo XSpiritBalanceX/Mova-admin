@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.supportItemRow {
+  padding: 0;
+  vertical-align: top;
+  margin-bottom: 20px !important;
+  box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+  border-radius: 15px;
+  max-height: 190px;
+  td {
+    border: none;
+    padding: 0;
+  }
+  .supportItemBox {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .buttonInfo {
+      text-transform: none;
+      color: map-get($theme-colors, "main-blue");
+      padding: 0;
+      border-radius: 0;
+      svg {
+        fill: map-get($theme-colors, "main-blue");
+        margin: 0 7px 0 0;
+      }
+    }
+  }
+  .supportItemMessage {
+    min-width: 190px;
+  }
+  .userNameBox {
+    min-width: 110px;
+  }
+}

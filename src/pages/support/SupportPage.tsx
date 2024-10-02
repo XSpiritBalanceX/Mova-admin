@@ -5,6 +5,7 @@ import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
 import CustomPagination from "@components/pagination/CustomPagination";
 import ControlledSearch from "@components/fields/ControlledSearch";
+import SupportItem from "@components/supportItem/SupportItem";
 import "./SupportPage.scss";
 
 const mockData = [
@@ -15,7 +16,7 @@ const mockData = [
     last_name: "Brown",
     status: 0,
     email: "example@gmail.com",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
   },
   {
     id: "00349",
@@ -108,7 +109,18 @@ const SupportPage = () => {
           </TableHead>
           <TableBody>
             {supportsItems.length !== 0 ? (
-              supportsItems.map((el, ind) => <p>{el.date}</p>)
+              supportsItems.map((el, ind) => (
+                <SupportItem
+                  key={ind}
+                  id={el.id}
+                  date={el.date}
+                  first_name={el.first_name}
+                  last_name={el.last_name}
+                  status={el.status}
+                  email={el.email}
+                  message={el.text}
+                />
+              ))
             ) : (
               <TableRow className="emptyRowUsers">
                 <TableCell colSpan={headColumns.length}>
