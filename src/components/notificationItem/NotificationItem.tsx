@@ -61,9 +61,9 @@ const NotificationItem = ({
           <p className="notificationType">
             {notification_type === "notification"
               ? t("notificationLesson")
-              : notification_type === ""
+              : notification_type === "canceled"
               ? t("canceledLesson")
-              : "canceled"}
+              : ""}
           </p>
           <p className="notificationText">{notification_text.slice(0, 20)}</p>
         </Box>

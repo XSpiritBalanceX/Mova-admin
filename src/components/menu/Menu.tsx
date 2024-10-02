@@ -48,9 +48,13 @@ const Menu = () => {
       <NavLink
         to={"/notifications/1"}
         onClick={handleClick}
-        className={() => (pathname.includes("notifications") ? "nav-link active" : "nav-link")}
+        className={() =>
+          pathname.includes("notifications") || pathname.includes("notification") ? "nav-link active" : "nav-link"
+        }
       >
-        <BelIcon fill={pathname.includes("notifications") ? "#FFFFFF" : "#A2A2A2"} />
+        <BelIcon
+          fill={pathname.includes("notifications") || pathname.includes("notification") ? "#FFFFFF" : "#A2A2A2"}
+        />
         {t("notifications")}
       </NavLink>
       <NavLink
