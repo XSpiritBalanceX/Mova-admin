@@ -5,6 +5,7 @@ import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
 import ControlsNotification from "@components/controlsNotifications/ControlsNotification";
 import CustomPagination from "@components/pagination/CustomPagination";
+import NotificationItem from "@components/notificationItem/NotificationItem";
 import "./NotificationsPage.scss";
 
 const mockData = [
@@ -130,7 +131,19 @@ const NotificationsPage = () => {
           </TableHead>
           <TableBody>
             {notifications.length !== 0 ? (
-              notifications.map((el, ind) => <p>{el.date}</p>)
+              notifications.map((el, ind) => (
+                <NotificationItem
+                  key={ind}
+                  id={el.id}
+                  date={el.date}
+                  first_name={el.first_name}
+                  last_name={el.last_name}
+                  status={el.status}
+                  email={el.email}
+                  notification_type={el.type}
+                  notification_text={el.text}
+                />
+              ))
             ) : (
               <TableRow className="emptyRowUsers">
                 <TableCell colSpan={headColumns.length}>
