@@ -208,6 +208,20 @@
       "textNotification": "Текст уведомления",
       "teacher": "Преподаватель",
       "student": "Ученик"
+    },
+    "supportPage": {
+      "searchUser": "Поиск пользователя",
+      "date": "Дата",
+      "time": "Время",
+      "firstLastName": "Имя Фамилия",
+      "status": "Статус",
+      "message": "Сообщение",
+      "teacher": "Преподаватель",
+      "student": "Ученик",
+      "attachedMaterials": "Прикреплённые материалы",
+      "emptySupport": "Пользователи не найдены",
+      "back": "Назад",
+      "next": "Далее"
     }
   }
 }

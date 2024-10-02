@@ -208,6 +208,20 @@
       "textNotification": "Notification text",
       "teacher": "Teacher",
       "student": "Student"
+    },
+    "supportPage": {
+      "searchUser": "Search for a user",
+      "date": "Date",
+      "time": "Time",
+      "firstLastName": "First Last Name",
+      "status": "Status",
+      "message": "Message",
+      "teacher": "Teacher",
+      "student": "Student",
+      "attachedMaterials": "Attached materials",
+      "emptySupport": "No users found",
+      "back": "Back",
+      "next": "Next"
     }
   }
 }

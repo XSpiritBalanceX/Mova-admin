@@ -8,6 +8,7 @@ import ChangeUserPage from "@pages/change_user/ChangeUserPage";
 import PaymentsPage from "@pages/payments/PaymentsPage";
 import NotificationsPage from "@pages/notifications/NotificationsPage";
 import NotificationItemPage from "@pages/notifications/NotificationItemPage";
+import SupportPage from "@pages/support/SupportPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
@@ -22,6 +23,7 @@ const RouterComponent = () => {
     { path: "/payments/:type/:page", element: <PaymentsPage /> },
     { path: "/notifications/:page", element: <NotificationsPage /> },
     { path: "/notification/:notification_id", element: <NotificationItemPage /> },
+    { path: "/supports/:page", element: <SupportPage /> },
   ];
 
   return (

@@ -58,11 +58,13 @@ const Menu = () => {
         {t("notifications")}
       </NavLink>
       <NavLink
-        to={"/support"}
+        to={"/supports/1"}
         onClick={handleClick}
-        className={() => (pathname.includes("support") ? "nav-link active" : "nav-link")}
+        className={() =>
+          pathname.includes("supports") || pathname.includes("support") ? "nav-link active" : "nav-link"
+        }
       >
-        <SupportIcon fill={pathname.includes("support") ? "#FFFFFF" : "#A2A2A2"} />
+        <SupportIcon fill={pathname.includes("supports") || pathname.includes("support") ? "#FFFFFF" : "#A2A2A2"} />
         {t("support")}
       </NavLink>
       <NavLink
