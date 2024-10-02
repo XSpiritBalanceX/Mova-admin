@@ -191,6 +191,21 @@
       "back": "Назад",
       "next": "Далее",
       "emptyPayments": "Пользователи не найдены"
+    },
+    "notificationsPage": {
+      "searchUser": "Поиск пользователя",
+      "date": "Дата",
+      "time": "Время",
+      "firstLastName": "Имя Фамилия",
+      "status": "Статус",
+      "notification": "Уведомление",
+      "back": "Назад",
+      "next": "Далее",
+      "emptyPayments": "Пользователи не найдены",
+      "typeNotification": "Тип уведомления",
+      "notificationLesson": "Напоминание об уроке",
+      "canceledLesson": "Отмена урока",
+      "textNotification": "Текст уведомления"
     }
   }
 }

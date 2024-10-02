@@ -6,6 +6,7 @@ import UsersPage from "@pages/users/UsersPage";
 import CreateAdminPage from "@pages/create_admin/CreateAdminPage";
 import ChangeUserPage from "@pages/change_user/ChangeUserPage";
 import PaymentsPage from "@pages/payments/PaymentsPage";
+import NotificationsPage from "@pages/notifications/NotificationsPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
@@ -18,6 +19,7 @@ const RouterComponent = () => {
     { path: "/create_admin", element: <CreateAdminPage /> },
     { path: "/user/:user_id/:type", element: <ChangeUserPage /> },
     { path: "/payments/:type/:page", element: <PaymentsPage /> },
+    { path: "/notifications/:page", element: <NotificationsPage /> },
   ];
 
   return (
