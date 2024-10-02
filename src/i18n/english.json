@@ -201,11 +201,13 @@
       "notification": "Notification",
       "back": "Back",
       "next": "Next",
-      "emptyPayments": "No users found",
+      "emptyNotifications": "No users found",
       "typeNotification": "Notification type",
       "notificationLesson": "Lesson reminder",
       "canceledLesson": "Canceling a lesson",
-      "textNotification": "Notification text"
+      "textNotification": "Notification text",
+      "teacher": "Teacher",
+      "student": "Student"
     }
   }
 }

@@ -4,6 +4,7 @@ import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
 import ControlsNotification from "@components/controlsNotifications/ControlsNotification";
+import CustomPagination from "@components/pagination/CustomPagination";
 import "./NotificationsPage.scss";
 
 const mockData = [
@@ -102,7 +103,7 @@ const NotificationsPage = () => {
     setSearchWord(word);
   };
 
-  const headColumns = ["ID", t("firstLastName"), t("status"), "E-mail", t("lastPayment"), t("methodPayment")];
+  const headColumns = [t("date"), t("time"), "ID", t("firstLastName"), t("status"), "E-mail", t("notification"), ""];
 
   useEffect(() => {
     if (searchWord === "") {
@@ -119,6 +120,34 @@ const NotificationsPage = () => {
       <Menu />
       <Box className="contentNotificationsPage">
         <ControlsNotification searchWord={searchWord} cbHandleChangeSearch={handleChangeSearch} />
+        <Table className="notificationsTable">
+          <TableHead className="notificationsTableHead">
+            <TableRow>
+              {headColumns.map((el, ind) => (
+                <TableCell key={ind}>{el}</TableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {notifications.length !== 0 ? (
+              notifications.map((el, ind) => <p>{el.date}</p>)
+            ) : (
+              <TableRow className="emptyRowUsers">
+                <TableCell colSpan={headColumns.length}>
+                  <p>{t("emptyNotifications")}</p>
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+        <CustomPagination
+          count={mockData.length}
+          itemsPerPage={notificationPerPage}
+          urlPage={`/notifications`}
+          activePage={page as string}
+          nameBtnBack={t("back")}
+          nameBtnNext={t("next")}
+        />
       </Box>
     </Container>
   );

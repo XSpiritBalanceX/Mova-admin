@@ -201,11 +201,13 @@
       "notification": "Уведомление",
       "back": "Назад",
       "next": "Далее",
-      "emptyPayments": "Пользователи не найдены",
+      "emptyNotifications": "Пользователи не найдены",
       "typeNotification": "Тип уведомления",
       "notificationLesson": "Напоминание об уроке",
       "canceledLesson": "Отмена урока",
-      "textNotification": "Текст уведомления"
+      "textNotification": "Текст уведомления",
+      "teacher": "Преподаватель",
+      "student": "Ученик"
     }
   }
 }
