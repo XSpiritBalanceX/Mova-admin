@@ -1,7 +1,7 @@
-import { Box, Button, TextField, InputAdornment } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { translate } from "@i18n";
 import { useParams, useNavigate } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
+import ControlledSearch from "@components/fields/ControlledSearch";
 import "./ControlsPayments.scss";
 
 interface IControlsPaymentsProps {
@@ -21,10 +21,6 @@ const ControlsPayments = ({ searchWord, cbHandleChangeSearch }: IControlsPayment
     navigate(`/payments/${e.currentTarget.name}/1`);
   };
 
-  const handleChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    cbHandleChangeSearch(e.currentTarget.value);
-  };
-
   return (
     <Box className="controlsPaymentsBox">
       <Box className="typesBox">
@@ -40,23 +36,11 @@ const ControlsPayments = ({ searchWord, cbHandleChangeSearch }: IControlsPayment
           </Button>
         ))}
       </Box>
-      <Box className="searchFieldBox">
-        <TextField
-          placeholder={t("searchUser")}
-          value={searchWord}
-          onChange={handleChangeSearch}
-          className="searchField"
-          slotProps={{
-            input: {
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            },
-          }}
-        />
-      </Box>
+      <ControlledSearch
+        placeholder={t("searchUser")}
+        searchWord={searchWord}
+        cbHandleChangeSearch={cbHandleChangeSearch}
+      />
     </Box>
   );
 };

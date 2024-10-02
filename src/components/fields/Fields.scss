@@ -57,3 +57,38 @@
     }
   }
 }
+
+.searchFieldBox {
+  width: 100%;
+  margin: 0 0 20px 0;
+  .searchField {
+    width: 100%;
+    height: 54px;
+    background-color: map-get($theme-colors, "gray");
+    border-radius: 30px;
+    .MuiInputBase-root.MuiInputBase-formControl {
+      height: 54px;
+      border-radius: 30px;
+      @extend %regular-text;
+      input {
+        height: 54px;
+        padding: 0 20px 0 0;
+        color: map-get($theme-colors, "black");
+      }
+      fieldset {
+        border: solid 1px map-get($theme-colors, "gray");
+      }
+      .MuiInputAdornment-root {
+        svg {
+          fill: map-get($theme-colors, "gray-3");
+        }
+      }
+    }
+    .MuiInputBase-root.MuiInputBase-formControl.Mui-focused {
+      border: none;
+      fieldset {
+        border: solid 2px map-get($theme-colors, "main-blue");
+      }
+    }
+  }
+}

@@ -1,18 +1,18 @@
 @import "../../variables";
 
-.notificationItemRow {
+.supportItemRow {
   padding: 0;
   vertical-align: top;
   margin-bottom: 20px !important;
   box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
   border-radius: 15px;
-  height: 82px;
+  max-height: 190px;
   td {
     border: none;
     padding: 0;
   }
-  .notificationItemBox {
-    padding: 20px 10px;
+  .supportItemBox {
+    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,18 +27,10 @@
       }
     }
   }
-  .notificationItemTypeText {
-    p {
-      margin: 0;
-      width: 100%;
-      min-width: 200px;
-    }
-    .notificationText {
-      @extend %body-2-regular;
-      color: map-get($theme-colors, "gray-3");
-    }
+  .supportItemMessage {
+    min-width: 190px;
   }
   .userNameBox {
-    min-width: 135px;
+    min-width: 110px;
   }
 }

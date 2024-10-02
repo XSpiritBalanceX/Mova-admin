@@ -1,0 +1,113 @@
+@import "../../variables";
+
+.supportPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentSupportPage {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    .supportPageTable {
+      border-collapse: separate;
+      border-spacing: 0 20px;
+      .supportTableHead {
+        tr {
+          th {
+            border: none;
+            color: map-get($theme-colors, "gray-3");
+            padding-bottom: 15px;
+            padding-top: 0;
+            @extend %medium-text;
+          }
+        }
+      }
+      .emptyRowUsers {
+        td {
+          border: none;
+          border-radius: 20px;
+          background-color: map-get($theme-colors, "white");
+          padding: 25px;
+          height: 90px;
+          p {
+            margin: 0;
+            @extend %medium-text;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.supportItemPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentSupportItemPage {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+    .navigationButtonBox {
+      margin: 0 0 20px 0;
+      button {
+        text-transform: none;
+        @extend %h2;
+        color: map-get($theme-colors, "black");
+        padding: 0;
+        svg {
+          margin: 0 15px 0 0;
+        }
+      }
+    }
+    .supportInfoBox {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 0 0 40px 0;
+      .itemInfoSupport {
+        margin: 0 50px 0 0;
+        .labelText {
+          margin: 0 0 10px 0;
+          @extend %body-1-regular;
+          color: map-get($theme-colors, "gray-3");
+        }
+        .dataText {
+          margin: 0;
+          @extend %body-1-medium;
+        }
+      }
+      .itemInfoNotification:last-child {
+        margin-right: 0;
+      }
+    }
+    .textSupportBox {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 40px 0;
+      .labelTextSupport {
+        margin: 0 0 10px 0;
+        @extend %body-1-regular;
+        color: map-get($theme-colors, "gray-3");
+      }
+      .dataTextSupportBox {
+        @extend %body-1-medium;
+        padding: 15px;
+        max-width: 590px;
+        width: 100%;
+        border: solid 1px map-get($theme-colors, "gray-3");
+        border-radius: 30px;
+      }
+    }
+    .materialsSupportBox {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 40px 0;
+      .labelMaterialSupport {
+        margin: 0 0 10px 0;
+        @extend %body-1-regular;
+        color: map-get($theme-colors, "gray-3");
+      }
+    }
+  }
+}
