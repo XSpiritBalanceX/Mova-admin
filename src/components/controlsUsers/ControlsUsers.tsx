@@ -1,8 +1,8 @@
-import { Box, Button, TextField, InputAdornment } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { translate } from "@i18n";
 import { useParams, useNavigate } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
-import SearchIcon from "@mui/icons-material/Search";
+import ControlledSearch from "@components/fields/ControlledSearch";
 import "./ControlsUsers.scss";
 
 interface IControlsUsersProps {
@@ -26,10 +26,6 @@ const ControlsUsers = ({ searchWord, cbHandleChangeSearch }: IControlsUsersProps
     navigate("/create_admin");
   };
 
-  const handleChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    cbHandleChangeSearch(e.currentTarget.value);
-  };
-
   return (
     <Box className="controlsUsersBox">
       <Box className="typesBox">
@@ -50,23 +46,11 @@ const ControlsUsers = ({ searchWord, cbHandleChangeSearch }: IControlsUsersProps
           <AddIcon /> {t("createAdmin")}
         </Button>
       </Box>
-      <Box className="searchFieldBox">
-        <TextField
-          placeholder={t("searchUsers")}
-          value={searchWord}
-          onChange={handleChangeSearch}
-          className="searchField"
-          slotProps={{
-            input: {
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            },
-          }}
-        />
-      </Box>
+      <ControlledSearch
+        placeholder={t("searchUsers")}
+        searchWord={searchWord}
+        cbHandleChangeSearch={cbHandleChangeSearch}
+      />
     </Box>
   );
 };

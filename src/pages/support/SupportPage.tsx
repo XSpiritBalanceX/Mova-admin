@@ -4,6 +4,7 @@ import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
 import CustomPagination from "@components/pagination/CustomPagination";
+import ControlledSearch from "@components/fields/ControlledSearch";
 import "./SupportPage.scss";
 
 const mockData = [
@@ -92,6 +93,11 @@ const SupportPage = () => {
     <Container className="supportPageContainer">
       <Menu />
       <Box className="contentSupportPage">
+        <ControlledSearch
+          placeholder={t("searchUser")}
+          searchWord={searchWord}
+          cbHandleChangeSearch={handleChangeSearch}
+        />
         <Table className="supportPageTable">
           <TableHead className="supportTableHead">
             <TableRow>

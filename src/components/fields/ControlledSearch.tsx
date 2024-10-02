@@ -1,24 +1,22 @@
 import { Box, TextField, InputAdornment } from "@mui/material";
-import { translate } from "@i18n";
 import SearchIcon from "@mui/icons-material/Search";
-import "./ControlsNotification.scss";
+import "./Fields.scss";
 
-interface IControlsNotificationProps {
+interface IControlledSearchProps {
+  placeholder: string;
   searchWord: string;
   cbHandleChangeSearch: (word: string) => void;
 }
 
-const ControlsNotification = ({ searchWord, cbHandleChangeSearch }: IControlsNotificationProps) => {
-  const { t } = translate("translate", { keyPrefix: "notificationsPage" });
-
+const ControlledSearch = ({ placeholder, searchWord, cbHandleChangeSearch }: IControlledSearchProps) => {
   const handleChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     cbHandleChangeSearch(e.currentTarget.value);
   };
 
   return (
-    <Box className="controlsNotificationBox">
+    <Box className="searchFieldBox">
       <TextField
-        placeholder={t("searchUser")}
+        placeholder={placeholder}
         value={searchWord}
         onChange={handleChangeSearch}
         className="searchField"
@@ -36,4 +34,4 @@ const ControlsNotification = ({ searchWord, cbHandleChangeSearch }: IControlsNot
   );
 };
 
-export default ControlsNotification;
+export default ControlledSearch;

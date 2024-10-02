@@ -3,7 +3,7 @@ import { Container, Box, Table, TableHead, TableRow, TableCell, TableBody } from
 import Menu from "@components/menu/Menu";
 import { translate } from "@i18n";
 import { useParams } from "react-router-dom";
-import ControlsNotification from "@components/controlsNotifications/ControlsNotification";
+import ControlledSearch from "@components/fields/ControlledSearch";
 import CustomPagination from "@components/pagination/CustomPagination";
 import NotificationItem from "@components/notificationItem/NotificationItem";
 import "./NotificationsPage.scss";
@@ -120,7 +120,11 @@ const NotificationsPage = () => {
     <Container className="notificationsPageContainer">
       <Menu />
       <Box className="contentNotificationsPage">
-        <ControlsNotification searchWord={searchWord} cbHandleChangeSearch={handleChangeSearch} />
+        <ControlledSearch
+          placeholder={t("searchUser")}
+          searchWord={searchWord}
+          cbHandleChangeSearch={handleChangeSearch}
+        />
         <Table className="notificationsTable">
           <TableHead className="notificationsTableHead">
             <TableRow>
