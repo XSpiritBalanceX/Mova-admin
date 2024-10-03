@@ -69,7 +69,7 @@ const ChangeAdminPassword = () => {
             error={errors?.old_password?.message}
           />
           <Box className="linkBox">
-            <NavLink to={"/forgot_password"}>{t("forgotPassword")}</NavLink>
+            <NavLink to={"/forgot_password/email"}>{t("forgotPassword")}</NavLink>
           </Box>
         </Box>
         <Box>

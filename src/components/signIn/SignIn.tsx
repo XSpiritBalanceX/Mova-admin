@@ -51,7 +51,7 @@ const SignIn = () => {
           />
         </Box>
         <Box className="linkBox">
-          <NavLink to={"/forgetpassword"}>{t("forgetPassword")}</NavLink>
+          <NavLink to={"/forgot_password/email"}>{t("forgetPassword")}</NavLink>
         </Box>
         <Box className="signInFieldBox"></Box>
         <Button type="submit" className="submitButton">

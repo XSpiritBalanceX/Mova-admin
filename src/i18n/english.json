@@ -247,6 +247,22 @@
       "errLetterNumber": "Invalid field filled in. From 3 to 20 characters",
       "wrongEmail": "Invalid email",
       "forgotPassword": "Forgot your password?"
+    },
+    "forgotPasswordPage": {
+      "passwordRecovery": "Password recovery",
+      "textPasswordRecovery": "Enter the email address you used when registering and we will send you a link to set a new password",
+      "email": "Email",
+      "wrongEmail": "Invalid email",
+      "errReqField": "Fill in the field",
+      "send": "Send",
+      "createNewPassword": "Create a new password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm your new password",
+      "wrongFormatPassword": "Only numbers, upper and lowercase Latin letters",
+      "passDontMatch": "Passwords don't match",
+      "passMin": "Password must be 8 characters long",
+      "passMax": "The password cannot have more than 32 characters",
+      "save": "Save"
     }
   }
 }
