@@ -245,7 +245,8 @@
       "month": "Month",
       "year": "Year",
       "errLetterNumber": "Invalid field filled in. From 3 to 20 characters",
-      "wrongEmail": "Invalid email"
+      "wrongEmail": "Invalid email",
+      "forgotPassword": "Forgot your password?"
     }
   }
 }

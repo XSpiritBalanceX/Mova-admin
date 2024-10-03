@@ -70,7 +70,6 @@ const ChangeAdminProfile = () => {
   const {
     control,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<IAdminInformation>({
     resolver: yupResolver(validationSchema),

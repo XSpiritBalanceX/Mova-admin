@@ -3,6 +3,7 @@ import Menu from "@components/menu/Menu";
 import { useLocation } from "react-router-dom";
 import AdminInformation from "@components/adminSettingsModules/AdminInformation";
 import ChangeAdminProfile from "@components/adminSettingsModules/ChangeAdminProfile";
+import ChangeAdminPassword from "@components/adminSettingsModules/ChangeAdminPassword";
 import "./AdminSettingsPage.scss";
 
 interface IAdminModules {
@@ -17,7 +18,7 @@ const AdminSettingsPage = () => {
   const adminSettingsModules: IAdminModules = {
     "/settings": <AdminInformation />,
     "/settings/admin": <ChangeAdminProfile />,
-    "/settings/password": <Box>change password</Box>,
+    "/settings/password": <ChangeAdminPassword />,
   };
 
   return (

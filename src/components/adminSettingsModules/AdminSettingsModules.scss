@@ -103,3 +103,46 @@
     width: 100%;
   }
 }
+
+.changeAdminPasswordBox {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .navigateButton {
+    text-transform: none;
+    @extend %btn;
+    color: map-get($theme-colors, "black");
+    padding: 0;
+    margin: 0 0 20px 0;
+    svg {
+      margin: 0 15px 0 0;
+    }
+  }
+  .oldPasswordBox {
+    margin: 0 0 20px 0;
+    .linkBox {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        text-decoration: none;
+        @extend %h3;
+        line-height: 110%;
+        color: map-get($theme-colors, "main-blue");
+      }
+    }
+  }
+  .fieldsLabel {
+    @extend %body-1-medium;
+    color: map-get($theme-colors, "black");
+    margin: 0 0 10px 0;
+  }
+  .fieldsLabel.errLabel {
+    color: map-get($theme-colors, "red");
+  }
+  .submitPasswordButton {
+    @extend %btn;
+    @extend %button-1;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}

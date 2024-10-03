@@ -245,7 +245,8 @@
       "month": "Месяц",
       "year": "Год",
       "errLetterNumber": "Неверное заполненное поле. От 3 до 20 символов",
-      "wrongEmail": "Неверный email"
+      "wrongEmail": "Неверный email",
+      "forgotPassword": "Забыли пароль?"
     }
   }
 }
