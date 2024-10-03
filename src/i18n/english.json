@@ -263,6 +263,11 @@
       "passMin": "Password must be 8 characters long",
       "passMax": "The password cannot have more than 32 characters",
       "save": "Save"
+    },
+    "errorPage": {
+      "title": "Page not found",
+      "text": "The page you requested was not found. We are already working on this. In the meantime, you can return to the main page.",
+      "button": "Go back to the main page"
     }
   }
 }
