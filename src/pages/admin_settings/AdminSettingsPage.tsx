@@ -2,6 +2,7 @@ import { Container, Box } from "@mui/material";
 import Menu from "@components/menu/Menu";
 import { useLocation } from "react-router-dom";
 import AdminInformation from "@components/adminSettingsModules/AdminInformation";
+import ChangeAdminProfile from "@components/adminSettingsModules/ChangeAdminProfile";
 import "./AdminSettingsPage.scss";
 
 interface IAdminModules {
@@ -15,7 +16,7 @@ const AdminSettingsPage = () => {
 
   const adminSettingsModules: IAdminModules = {
     "/settings": <AdminInformation />,
-    "/settings/admin": <Box>change admin</Box>,
+    "/settings/admin": <ChangeAdminProfile />,
     "/settings/password": <Box>change password</Box>,
   };
 

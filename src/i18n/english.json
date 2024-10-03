@@ -243,7 +243,9 @@
       "passMax": "The password cannot have more than 32 characters",
       "day": "Day",
       "month": "Month",
-      "year": "Year"
+      "year": "Year",
+      "errLetterNumber": "Invalid field filled in. From 3 to 20 characters",
+      "wrongEmail": "Invalid email"
     }
   }
 }

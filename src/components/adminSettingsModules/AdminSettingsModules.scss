@@ -63,3 +63,43 @@
     @extend %button-2;
   }
 }
+
+.changeAdminProfileBox {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .navigateButton {
+    text-transform: none;
+    @extend %btn;
+    color: map-get($theme-colors, "black");
+    padding: 0;
+    margin: 0 0 20px 0;
+    svg {
+      margin: 0 15px 0 0;
+    }
+  }
+  .adminProfileForm {
+    margin: 15px 0 0 0;
+    .dateOfBirthBox {
+      display: flex;
+      flex-direction: column;
+      .labelBox {
+        @extend %body-1-medium;
+        margin: 0 0 10px 0;
+      }
+      .dateOfBirthFields {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .controlledFieldBox {
+          max-width: 136px;
+        }
+      }
+    }
+  }
+  .submitButton {
+    @extend %btn;
+    @extend %button-1;
+    width: 100%;
+  }
+}
