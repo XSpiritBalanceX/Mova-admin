@@ -222,6 +222,28 @@
       "emptySupport": "No users found",
       "back": "Back",
       "next": "Next"
+    },
+    "adminSettingsPage": {
+      "change": "Change",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "changePassword": "Change password",
+      "dateOfBirth": "Date of birth",
+      "saveChanges": "Save changes",
+      "errReqField": "Fill in the field",
+      "profile": "Profile",
+      "enterOldPassword": "Enter old password",
+      "password": "Password",
+      "createNewPassword": "Create a new password",
+      "newPassword": "New Password",
+      "confirmNewPassword": "Confirm your new password",
+      "wrongFormatPassword": "Only numbers, upper and lowercase Latin letters",
+      "passDontMatch": "Passwords don't match",
+      "passMin": "Password must be 8 characters long",
+      "passMax": "The password cannot have more than 32 characters",
+      "day": "Day",
+      "month": "Month",
+      "year": "Year"
     }
   }
 }

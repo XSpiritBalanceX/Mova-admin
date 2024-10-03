@@ -49,6 +49,23 @@ $theme-colors: (
   }
 }
 
+%button-2 {
+  height: 54px;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #5e66a7;
+  text-transform: none;
+  border: solid 1px #5e66a7;
+  &:hover {
+    border: solid 1px #9098d9;
+    color: #9098d9;
+  }
+  &:active {
+    border: solid 1px #2c3475;
+    color: #2c3475;
+  }
+}
+
 %title {
   font-family: "Montserrat";
   font-style: normal;

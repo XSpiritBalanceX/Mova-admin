@@ -222,6 +222,28 @@
       "emptySupport": "Пользователи не найдены",
       "back": "Назад",
       "next": "Далее"
+    },
+    "adminSettingsPage": {
+      "change": "Изменить",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "changePassword": "Изменить пароль",
+      "dateOfBirth": "Дата рождения",
+      "saveChanges": "Сохранить изменения",
+      "errReqField": "Заполните поле",
+      "profile": "Профиль",
+      "enterOldPassword": "Введите старый пароль",
+      "password": "Пароль",
+      "createNewPassword": "Придумайте новый пароль",
+      "newPassword": "Новый пароль",
+      "confirmNewPassword": "Подтвердите новый пароль",
+      "wrongFormatPassword": "Только цифры, заглавные и строчные латинские буквы",
+      "passDontMatch": "Пароли не совпадают",
+      "passMin": "Пароль должен состоять из 8 символов",
+      "passMax": "Пароль не может иметь больше 32 символов",
+      "day": "День",
+      "month": "Месяц",
+      "year": "Год"
     }
   }
 }
