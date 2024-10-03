@@ -47,6 +47,10 @@ $theme-colors: (
     border: solid 1px #2c3475;
     background-color: #2c3475;
   }
+  &:disabled {
+    color: #fefeff;
+    opacity: 0.5;
+  }
 }
 
 %button-2 {
@@ -63,6 +67,10 @@ $theme-colors: (
   &:active {
     border: solid 1px #2c3475;
     color: #2c3475;
+  }
+  &:disabled {
+    color: #2c3475;
+    opacity: 0.5;
   }
 }
 

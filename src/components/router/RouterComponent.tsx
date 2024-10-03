@@ -15,7 +15,7 @@ import ForgotPasswordPage from "@pages/forgot_password/ForgotPasswordPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
-  const isLogin = false;
+  const isLogin = true;
 
   const unAuthRoutes = [{ path: "/login", element: <AuthPage /> }];
 
