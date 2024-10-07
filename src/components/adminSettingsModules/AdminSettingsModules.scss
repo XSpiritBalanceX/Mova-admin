@@ -1,0 +1,148 @@
+@import "../../variables";
+
+.adminInformationContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  width: 100%;
+  .avatarButtonBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 0 20px 0;
+    .adminAvatar,
+    .emptyAdminAvatar {
+      width: 100px;
+      height: 100px;
+    }
+    .emptyAdminAvatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: map-get($theme-colors, "gray-3");
+      border-radius: 100%;
+      @extend %title;
+      color: map-get($theme-colors, "white");
+    }
+    button {
+      text-transform: none;
+      color: map-get($theme-colors, "main-blue");
+    }
+  }
+  .adminInformationBox {
+    box-shadow: map-deep-get($theme-colors, "box-shadow", "item");
+    border-radius: 15px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 15px 0;
+    .itemInformation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 0 0 20px 0;
+      .labelInformation {
+        max-width: 135px;
+        width: 100%;
+        margin: 0;
+        @extend %body-2-regular;
+        color: map-get($theme-colors, "gray-3");
+      }
+      .dataInformation {
+        margin: 0;
+        @extend %body-1-medium;
+      }
+    }
+    .itemInformation:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .changePasswordButton {
+    @extend %btn;
+    @extend %button-2;
+  }
+}
+
+.changeAdminProfileBox {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .navigateButton {
+    text-transform: none;
+    @extend %btn;
+    color: map-get($theme-colors, "black");
+    padding: 0;
+    margin: 0 0 20px 0;
+    svg {
+      margin: 0 15px 0 0;
+    }
+  }
+  .adminProfileForm {
+    margin: 15px 0 0 0;
+    .dateOfBirthBox {
+      display: flex;
+      flex-direction: column;
+      .labelBox {
+        @extend %body-1-medium;
+        margin: 0 0 10px 0;
+      }
+      .dateOfBirthFields {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .controlledFieldBox {
+          max-width: 136px;
+        }
+      }
+    }
+  }
+  .submitButton {
+    @extend %btn;
+    @extend %button-1;
+    width: 100%;
+  }
+}
+
+.changeAdminPasswordBox {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 0 40px 0;
+  .navigateButton {
+    text-transform: none;
+    @extend %btn;
+    color: map-get($theme-colors, "black");
+    padding: 0;
+    margin: 0 0 20px 0;
+    svg {
+      margin: 0 15px 0 0;
+    }
+  }
+  .oldPasswordBox {
+    margin: 0 0 20px 0;
+    .linkBox {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        text-decoration: none;
+        @extend %h3;
+        line-height: 110%;
+        color: map-get($theme-colors, "main-blue");
+      }
+    }
+  }
+  .fieldsLabel {
+    @extend %body-1-medium;
+    color: map-get($theme-colors, "black");
+    margin: 0 0 10px 0;
+  }
+  .fieldsLabel.errLabel {
+    color: map-get($theme-colors, "red");
+  }
+  .submitPasswordButton {
+    @extend %btn;
+    @extend %button-1;
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
+}

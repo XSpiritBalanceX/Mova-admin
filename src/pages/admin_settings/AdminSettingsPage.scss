@@ -1,0 +1,12 @@
+@import "../../variables";
+
+.settingsPageContainer {
+  padding: 0 !important;
+  display: flex;
+  flex-direction: row;
+  .contentSettingsPage {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 211px);
+  }
+}

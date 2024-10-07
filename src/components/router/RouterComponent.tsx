@@ -10,12 +10,14 @@ import NotificationsPage from "@pages/notifications/NotificationsPage";
 import NotificationItemPage from "@pages/notifications/NotificationItemPage";
 import SupportPage from "@pages/support/SupportPage";
 import SupportItemPage from "@pages/support/SupportItemPage";
+import AdminSettingsPage from "@pages/admin_settings/AdminSettingsPage";
+import ForgotPasswordPage from "@pages/forgot_password/ForgotPasswordPage";
 
 const RouterComponent = () => {
   //TODO: add real logic about authorization from store
   const isLogin = true;
 
-  const unauthRoutes = [{ path: "/login", element: <AuthPage /> }];
+  const unAuthRoutes = [{ path: "/login", element: <AuthPage /> }];
 
   const authRoutes = [
     { path: "/users/:type/:page", element: <UsersPage /> },
@@ -26,15 +28,26 @@ const RouterComponent = () => {
     { path: "/notification/:notification_id", element: <NotificationItemPage /> },
     { path: "/supports/:page", element: <SupportPage /> },
     { path: "/support/:support_id", element: <SupportItemPage /> },
+    { path: "/settings", element: <AdminSettingsPage /> },
+    { path: "/settings/admin", element: <AdminSettingsPage /> },
+    { path: "/settings/password", element: <AdminSettingsPage /> },
+  ];
+
+  const unProtectedRoutes = [
+    { path: "/forgot_password/email", element: <ForgotPasswordPage /> },
+    { path: "/forgot_password/password", element: <ForgotPasswordPage /> },
   ];
 
   return (
     <Routes>
-      {unauthRoutes.map((el, ind) => (
+      {unAuthRoutes.map((el, ind) => (
         <Route key={ind} path={el.path} element={<ProtectedRouterForLogged>{el.element}</ProtectedRouterForLogged>} />
       ))}
       {authRoutes.map((el, ind) => (
         <Route key={ind} path={el.path} element={<ProtectedRouter>{el.element}</ProtectedRouter>} />
+      ))}
+      {unProtectedRoutes.map((el, ind) => (
+        <Route key={ind} path={el.path} element={el.element} />
       ))}
       <Route path="*" element={isLogin ? <Navigate to={"/users/all/1"} /> : <Navigate to={"/login"} />} />
     </Routes>

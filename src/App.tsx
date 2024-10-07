@@ -7,6 +7,7 @@ import ScrollToTop from "@components/scrollToTop/ScrollToTop";
 import { ToastContainer, Zoom } from "react-toastify";
 import Header from "@components/header/Header";
 import moment from "moment";
+import ErrorBoundary from "@components/error/ErrorBoundary";
 import "moment/locale/ru";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -22,7 +23,7 @@ const App = () => {
   }, [locale]);
 
   return (
-    <>
+    <ErrorBoundary>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -35,7 +36,7 @@ const App = () => {
       <ScrollToTop />
       <Header />
       <RouterComponent />
-    </>
+    </ErrorBoundary>
   );
 };
 

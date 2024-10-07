@@ -2,4 +2,12 @@
 
 .headerContainer {
   padding: 30px 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    padding: 0;
+    min-width: 24px;
+    color: map-get($theme-colors, "main-blue");
+  }
 }
