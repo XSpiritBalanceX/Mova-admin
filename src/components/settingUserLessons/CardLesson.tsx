@@ -23,7 +23,7 @@ const CardLesson = ({ lesson_information, cbShowModal }: ICardLessonProps) => {
 
   const handleShowUserPage = () => {
     isStudent && navigate(`/teacher/${lesson_information.teacher_id}`);
-    !isStudent && navigate(`/student/${lesson_information.teacher_id}`);
+    !isStudent && navigate(`/student/${lesson_information.student_id}`);
   };
 
   return (
@@ -50,14 +50,14 @@ const CardLesson = ({ lesson_information, cbShowModal }: ICardLessonProps) => {
             <Avatar src={lesson_information.photo} className="userAvatar" onClick={handleShowUserPage} />
           )}
           {!lesson_information.photo && (
-            <Box className="emptyUserAvatarPhoto">{`${lesson_information.teacher_first_name.charAt(
+            <Box className="emptyUserAvatarPhoto">{`${lesson_information.first_name.charAt(
               0,
-            )}${lesson_information.teacher_last_name.charAt(0)}`}</Box>
+            )}${lesson_information.last_name.charAt(0)}`}</Box>
           )}
           <p
             className="userName"
             onClick={handleShowUserPage}
-          >{`${lesson_information.teacher_first_name} ${lesson_information.teacher_last_name}`}</p>
+          >{`${lesson_information.first_name} ${lesson_information.last_name}`}</p>
         </Box>
       </Box>
     </Box>

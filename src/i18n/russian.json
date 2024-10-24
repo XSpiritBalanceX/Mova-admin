@@ -138,7 +138,12 @@
       "errRequest": "Возникла непредвиденная ошибка",
       "noOneLessons": "Вы не записались ни на один урок",
       "noOneLessonsTeacher": "У Вас нет забронированных уроков",
-      "errorReason": "Укажите причину отмены урока"
+      "errorReason": "Укажите причину отмены урока",
+      "noOnePastLessons": "Прошедших уроков пока нет",
+      "noOneUpcomingLessons": "Ближайших уроков пока нет",
+      "noOneCanceledLessons": "Отмененных уроков пока нет",
+      "canceledTeacher": "Урок был отменён преподавателем",
+      "canceledStudent": "Урок был отменён учеником"
     },
     "settingUserSubscription": {
       "subscription": "Подписка",

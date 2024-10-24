@@ -24,12 +24,15 @@
 }
 
 .userLessonsBox {
-  max-width: 515px;
+  max-width: 680px;
   margin: 0 0 40px 0;
+  min-height: 400px;
   .emptyDataBox {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%;
     p {
       margin: 0;
       @extend %h1;
@@ -39,6 +42,9 @@
     }
   }
   .lessonsCardBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .titleLessons {
       @extend %h1;
       margin: 0 0 10px 0;

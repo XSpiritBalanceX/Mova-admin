@@ -7,9 +7,10 @@ import "./Modal.scss";
 interface ILesson {
   id: number;
   schedule_id: number;
-  teacher_id: number;
-  teacher_first_name: string;
-  teacher_last_name: string;
+  teacher_id?: number;
+  student_id?: number;
+  first_name: string;
+  last_name: string;
   photo: string | null;
   date: string;
   time_start: string;

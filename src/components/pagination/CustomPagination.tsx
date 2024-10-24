@@ -1,5 +1,7 @@
 import { Pagination, PaginationItem } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import NavigateNextOutlinedIcon from "@mui/icons-material/NavigateNextOutlined";
+import NavigateBeforeOutlinedIcon from "@mui/icons-material/NavigateBeforeOutlined";
 import "./CustomPagination.scss";
 
 interface ICustomPaginationProps {
@@ -31,14 +33,15 @@ const CustomPagination = ({
       onChange={handleChangePage}
       className="customPagination"
       page={Number(activePage)}
-      renderItem={(item) =>
-        nameBtnBack && (
-          <PaginationItem
-            slots={{ previous: () => <p>{nameBtnBack}</p>, next: () => <p>{nameBtnNext}</p> }}
-            {...item}
-          />
-        )
-      }
+      renderItem={(item) => (
+        <PaginationItem
+          slots={{
+            previous: () => (nameBtnBack ? <p>{nameBtnBack}</p> : <NavigateBeforeOutlinedIcon />),
+            next: () => (nameBtnNext ? <p>{nameBtnNext}</p> : <NavigateNextOutlinedIcon />),
+          }}
+          {...item}
+        />
+      )}
     />
   );
 };
