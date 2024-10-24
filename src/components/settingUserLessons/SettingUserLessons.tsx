@@ -102,11 +102,8 @@ export interface ILesson {
 const SettingUserLessons = () => {
   const { t } = translate("translate", { keyPrefix: "settingUserLessons" });
 
-  const { type, user_id } = useParams();
+  const { user_id, page } = useParams();
   const navigate = useNavigate();
-
-  const matchNumber = (type as string).match(/(\d+)/);
-  const page = parseInt(matchNumber![0], 10);
 
   const [itemPerPage] = useState(5);
   const [isOpenModal, setIsOpenModal] = useState(false);

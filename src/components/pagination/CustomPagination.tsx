@@ -7,8 +7,8 @@ interface ICustomPaginationProps {
   itemsPerPage: number;
   urlPage: string;
   activePage: string;
-  nameBtnBack: string;
-  nameBtnNext: string;
+  nameBtnBack?: string;
+  nameBtnNext?: string;
 }
 
 const CustomPagination = ({
@@ -28,13 +28,17 @@ const CustomPagination = ({
   return (
     <Pagination
       count={Math.ceil(count / itemsPerPage)}
-      shape="rounded"
       onChange={handleChangePage}
       className="customPagination"
       page={Number(activePage)}
-      renderItem={(item) => (
-        <PaginationItem slots={{ previous: () => <p>{nameBtnBack}</p>, next: () => <p>{nameBtnNext}</p> }} {...item} />
-      )}
+      renderItem={(item) =>
+        nameBtnBack && (
+          <PaginationItem
+            slots={{ previous: () => <p>{nameBtnBack}</p>, next: () => <p>{nameBtnNext}</p> }}
+            {...item}
+          />
+        )
+      }
     />
   );
 };

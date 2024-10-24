@@ -53,7 +53,7 @@ const ChangeUserMenu = () => {
 
   const handleNavigateChanges = (e: React.MouseEvent<HTMLButtonElement>) => {
     if (e.currentTarget.name === "lessons") {
-      navigate(`/user/${user_id}/lessons_1`);
+      navigate(`/user/${user_id}/lessons/upcoming/1`);
     } else {
       navigate(`/user/${user_id}/${e.currentTarget.name}`);
     }

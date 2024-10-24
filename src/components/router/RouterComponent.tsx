@@ -23,6 +23,7 @@ const RouterComponent = () => {
     { path: "/users/:type/:page", element: <UsersPage /> },
     { path: "/create_admin", element: <CreateAdminPage /> },
     { path: "/user/:user_id/:type", element: <ChangeUserPage /> },
+    { path: "/user/:user_id/:type/:lesson_type/:page", element: <ChangeUserPage /> },
     { path: "/payments/:type/:page", element: <PaymentsPage /> },
     { path: "/notifications/:page", element: <NotificationsPage /> },
     { path: "/notification/:notification_id", element: <NotificationItemPage /> },
