@@ -1,4 +1,5 @@
 @use "sass:map";
+@import "./fonts";
 
 $theme-colors: (
   "white": #fefeff,
@@ -75,7 +76,7 @@ $theme-colors: (
 }
 
 %title {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -83,7 +84,7 @@ $theme-colors: (
 }
 
 %h1 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -91,7 +92,7 @@ $theme-colors: (
 }
 
 %h2 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -99,7 +100,7 @@ $theme-colors: (
 }
 
 %h3 {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -107,7 +108,7 @@ $theme-colors: (
 }
 
 %body-1-regular {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -115,7 +116,7 @@ $theme-colors: (
 }
 
 %body-1-medium {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -123,7 +124,7 @@ $theme-colors: (
 }
 
 %body-2-regular {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -131,7 +132,7 @@ $theme-colors: (
 }
 
 %body-2-bold {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -139,7 +140,7 @@ $theme-colors: (
 }
 
 %medium-text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -147,7 +148,7 @@ $theme-colors: (
 }
 
 %regular-text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -155,7 +156,7 @@ $theme-colors: (
 }
 
 %small-text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
@@ -163,7 +164,7 @@ $theme-colors: (
 }
 
 %btn {
-  font-family: "Montserrat";
+  font-family: "Montserrat", "Rubik", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
