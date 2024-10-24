@@ -4,6 +4,7 @@ import { translate } from "@i18n";
 import { useNavigate, useParams } from "react-router-dom";
 import CardLesson from "./CardLesson";
 import ModalCancelLesson from "@components/modal/ModalCancelLesson";
+import LessonsNavigation from "./LessonsNavigation";
 import "./SettingUserLessons.scss";
 
 const mockData = {
@@ -142,6 +143,7 @@ const SettingUserLessons = () => {
       {selectedLesson && (
         <ModalCancelLesson isOpen={isOpenModal} cbCloseModal={handleCloseModal} lesson={selectedLesson} />
       )}
+      <LessonsNavigation />
       <Box className="userLessonsBox">
         {mockData.items.length === 0 && (
           <Box className="emptyDataBox">

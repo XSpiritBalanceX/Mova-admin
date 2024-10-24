@@ -1,5 +1,28 @@
 @import "../../variables";
 
+.navigationLessonsBox {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 15px 0;
+  .nav-link {
+    @extend %body-1-medium;
+    font-weight: 600;
+    margin: 0 10px 0 0;
+    padding: 8px 10px;
+    color: map-get($theme-colors, "secondary-blue");
+    background-color: map-get($theme-colors, "white-blue");
+    border-radius: 30px;
+    text-decoration: none;
+  }
+  .nav-link.active {
+    background-color: map-get($theme-colors, "light-blue");
+    color: map-get($theme-colors, "main-blue");
+  }
+  .nav-link:last-child {
+    margin-right: 0;
+  }
+}
+
 .userLessonsBox {
   max-width: 515px;
   margin: 0 0 40px 0;

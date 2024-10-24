@@ -123,9 +123,10 @@
     "settingUserLessons": {
       "myLessons": "Мои уроки",
       "allLessons": "Все уроки",
-      "upcomingLessons": "Ближайшие уроки",
+      "upcomingLessons": "Ближайшие",
       "cancelLesson": "Отменить урок",
-      "pastLessons": "Прошедшие уроки",
+      "pastLessons": "Прошедшие",
+      "canceledLessons": "Отмененные",
       "paid": "Оплачено",
       "notPayed": "Не оплачено",
       "lessonCanceled": "Урок отменен",
