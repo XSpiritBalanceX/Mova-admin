@@ -1,7 +1,6 @@
 import { Box, Button } from "@mui/material";
 import { translate } from "@i18n";
 import BucketIcon from "@components/icons/BucketIcon";
-import AddIcon from "@mui/icons-material/Add";
 import Cards from "react-credit-cards-2";
 import Slider from "react-slick";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
@@ -35,11 +34,7 @@ const mockData = [
   },
 ];
 
-interface IUserBankCardsProps {
-  cbHandleAddNewBankCard: () => void;
-}
-
-const UserBankCards = ({ cbHandleAddNewBankCard }: IUserBankCardsProps) => {
+const UserBankCards = () => {
   const { t } = translate("translate", { keyPrefix: "settingUserSubscription" });
 
   const settings = {
@@ -57,10 +52,6 @@ const UserBankCards = ({ cbHandleAddNewBankCard }: IUserBankCardsProps) => {
 
   const handleMakeActive = (id: number) => {
     console.log("make active card", id);
-  };
-
-  const handleAddCard = () => {
-    cbHandleAddNewBankCard();
   };
 
   return (
@@ -90,14 +81,6 @@ const UserBankCards = ({ cbHandleAddNewBankCard }: IUserBankCardsProps) => {
           </Box>
         ))}
       </Slider>
-      <Box className="addCardButtonBox" onClick={handleAddCard}>
-        <p className="icon">
-          <AddIcon />
-        </p>
-        <Button type="button" className="addCardButton">
-          {t("addCard")}
-        </Button>
-      </Box>
     </Box>
   );
 };

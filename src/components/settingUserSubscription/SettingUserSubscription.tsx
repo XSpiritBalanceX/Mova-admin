@@ -4,7 +4,6 @@ import { translate } from "@i18n";
 import moment from "moment";
 import Balance from "./Balance";
 import UserBankCards from "./UserBankCards";
-import ModalNewBankCard from "@components/modal/ModalNewBankCard";
 import UserPaymentHistory from "./UserPaymentHistory";
 import "./SettingUserSubscription.scss";
 
@@ -72,7 +71,6 @@ export type TItemHistory = {
 const SettingUserSubscription = () => {
   const { t } = translate("translate", { keyPrefix: "settingUserSubscription" });
 
-  const [isAddNewBankCard, setIsAddNewBankCard] = useState(false);
   const [isShowAllHistory, setIsShowAllHistory] = useState(false);
   const [historyOfPayment, setHistoryOfPayment] = useState(mockDataHistory.slice(0, 5));
 
@@ -81,14 +79,6 @@ const SettingUserSubscription = () => {
     { label: "paymentMethod", date: mockDataSubscription.card },
     { label: "sum", date: mockDataSubscription.sum },
   ];
-
-  const handleOpenModal = () => {
-    setIsAddNewBankCard(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsAddNewBankCard(false);
-  };
 
   const handleShowCollapseAllHistory = () => {
     setIsShowAllHistory(!isShowAllHistory);
@@ -100,37 +90,31 @@ const SettingUserSubscription = () => {
   };
 
   return (
-    <>
-      <ModalNewBankCard isOpen={isAddNewBankCard} cbCloseModal={handleCloseModal} />
-      <Box className="settingSubscriptionBox">
-        <Box className="subscriptionBalanceBox">
-          <Box className="subscriptionBox">
-            <p className="subscriptionTitle">{t("subscription")}</p>
-            <p className="subscriptionNameDate">
-              {mockDataSubscription.name}
-              <span>
-                {t("activeTo", { date: moment(mockDataSubscription.date_end, "YYYY-MM-DD").format("D MMMM") })}
-              </span>
-            </p>
-            <Box className="subscriptionFieldsBox">
-              {subscriptionInfoFields.map((el, ind) => (
-                <Box key={ind} className="itemSubscriptionInfo">
-                  <p className="itemSubscriptionTitle">{t(el.label)}</p>{" "}
-                  <p className="itemSubscriptionData">{el.date}</p>
-                </Box>
-              ))}
-            </Box>
+    <Box className="settingSubscriptionBox">
+      <Box className="subscriptionBalanceBox">
+        <Box className="subscriptionBox">
+          <p className="subscriptionTitle">{t("subscription")}</p>
+          <p className="subscriptionNameDate">
+            {mockDataSubscription.name}
+            <span>{t("activeTo", { date: moment(mockDataSubscription.date_end, "YYYY-MM-DD").format("D MMMM") })}</span>
+          </p>
+          <Box className="subscriptionFieldsBox">
+            {subscriptionInfoFields.map((el, ind) => (
+              <Box key={ind} className="itemSubscriptionInfo">
+                <p className="itemSubscriptionTitle">{t(el.label)}</p> <p className="itemSubscriptionData">{el.date}</p>
+              </Box>
+            ))}
           </Box>
-          <Balance />
         </Box>
-        <UserBankCards cbHandleAddNewBankCard={handleOpenModal} />
-        <UserPaymentHistory
-          userHistory={historyOfPayment}
-          isShowAllHistory={isShowAllHistory}
-          cbHandleShowCollapseAllHistory={handleShowCollapseAllHistory}
-        />
+        <Balance />
       </Box>
-    </>
+      <UserBankCards />
+      <UserPaymentHistory
+        userHistory={historyOfPayment}
+        isShowAllHistory={isShowAllHistory}
+        cbHandleShowCollapseAllHistory={handleShowCollapseAllHistory}
+      />
+    </Box>
   );
 };
 
